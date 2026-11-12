@@ -1,0 +1,662 @@
+{
+  "source": "github.com/nikogniko/diploma-system, state as of 09.06.2026 (commit f803730): server/prisma/schema.prisma, server/prisma/seed.ts, server/src/services/ApplicationService.ts, server/src/services/VacancyService.ts",
+  "tables": {
+    "User": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "clerkUserId": {
+          "type": "string",
+          "required": true,
+          "max": 255
+        },
+        "email": {
+          "type": "string",
+          "required": true,
+          "max": 255
+        },
+        "role": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "STUDENT",
+            "HR",
+            "SYS_ADMIN"
+          ]
+        },
+        "status": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "PENDING_VERIFICATION",
+            "ACTIVE",
+            "BLOCKED",
+            "DELETED"
+          ]
+        },
+        "firstName": {
+          "type": "string",
+          "required": true,
+          "max": 100
+        },
+        "lastName": {
+          "type": "string",
+          "required": true,
+          "max": 100
+        },
+        "middleName": {
+          "type": "string",
+          "required": false,
+          "max": 100
+        },
+        "createdAt": {
+          "type": "datetime",
+          "required": true
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ],
+        [
+          "clerkUserId"
+        ],
+        [
+          "email"
+        ]
+      ]
+    },
+    "Company": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "registrationType": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "COMPANY",
+            "FOP"
+          ]
+        },
+        "registrationNumber": {
+          "type": "string",
+          "required": true,
+          "max": 50
+        },
+        "legalName": {
+          "type": "string",
+          "required": true,
+          "max": 200
+        },
+        "publicName": {
+          "type": "string",
+          "required": true,
+          "max": 100
+        },
+        "foundationYear": {
+          "type": "int",
+          "required": true
+        },
+        "employeeCount": {
+          "type": "enum",
+          "required": false,
+          "values": [
+            "SIZE_1_10",
+            "SIZE_11_20",
+            "SIZE_21_50",
+            "SIZE_51_100",
+            "SIZE_101_200",
+            "SIZE_201_500",
+            "SIZE_501_1000",
+            "SIZE_1000_PLUS"
+          ]
+        },
+        "about": {
+          "type": "string",
+          "required": true
+        },
+        "publicEmail": {
+          "type": "string",
+          "required": true,
+          "max": 255
+        },
+        "verificationStatus": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "createdAt": {
+          "type": "datetime",
+          "required": true
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ],
+        [
+          "registrationNumber"
+        ]
+      ]
+    },
+    "HrProfile": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "required": true,
+          "ref": "User"
+        },
+        "companyId": {
+          "type": "string",
+          "required": true,
+          "ref": "Company"
+        },
+        "position": {
+          "type": "string",
+          "required": true,
+          "max": 150
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ],
+        [
+          "userId"
+        ]
+      ]
+    },
+    "StudentProfile": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "userId": {
+          "type": "string",
+          "required": true,
+          "ref": "User"
+        },
+        "gender": {
+          "type": "enum",
+          "required": false,
+          "values": [
+            "MALE",
+            "FEMALE"
+          ]
+        },
+        "birthDate": {
+          "type": "datetime",
+          "required": true
+        },
+        "contactEmail": {
+          "type": "string",
+          "required": true,
+          "max": 255
+        },
+        "primaryPhone": {
+          "type": "string",
+          "required": true,
+          "max": 50
+        },
+        "desiredPosition": {
+          "type": "string",
+          "required": false,
+          "max": 150
+        },
+        "minSalary": {
+          "type": "int",
+          "required": false
+        },
+        "visibility": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "PUBLIC",
+            "APPLIED_ONLY",
+            "HIDDEN"
+          ]
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ],
+        [
+          "userId"
+        ]
+      ]
+    },
+    "Vacancy": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "hrProfileId": {
+          "type": "string",
+          "required": true,
+          "ref": "HrProfile"
+        },
+        "companyId": {
+          "type": "string",
+          "required": true,
+          "ref": "Company"
+        },
+        "title": {
+          "type": "string",
+          "required": true,
+          "max": 200
+        },
+        "description": {
+          "type": "string",
+          "required": true
+        },
+        "professionId": {
+          "type": "int",
+          "required": true,
+          "dict": "professions"
+        },
+        "minSalary": {
+          "type": "int",
+          "required": false
+        },
+        "maxSalary": {
+          "type": "int",
+          "required": false
+        },
+        "salaryPeriod": {
+          "type": "enum",
+          "required": false,
+          "values": [
+            "PER_MONTH",
+            "PER_HOUR"
+          ]
+        },
+        "status": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "DRAFT",
+            "ACTIVE",
+            "PAUSED",
+            "CLOSED",
+            "ARCHIVED"
+          ]
+        },
+        "createdAt": {
+          "type": "datetime",
+          "required": true
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "required": false
+        },
+        "closingDate": {
+          "type": "datetime",
+          "required": true
+        },
+        "closedAt": {
+          "type": "datetime",
+          "required": false
+        },
+        "closeReason": {
+          "type": "enum",
+          "required": false,
+          "values": [
+            "HIRED",
+            "CANCELLED",
+            "EXPIRED",
+            "MANUAL"
+          ]
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ]
+      ]
+    },
+    "VacancySkill": {
+      "fields": {
+        "vacancyId": {
+          "type": "string",
+          "required": true,
+          "ref": "Vacancy"
+        },
+        "skillId": {
+          "type": "int",
+          "required": true,
+          "dict": "skills"
+        },
+        "weight": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "CRITICAL",
+            "IMPORTANT",
+            "NICE_TO_HAVE"
+          ]
+        }
+      },
+      "unique": [
+        [
+          "vacancyId",
+          "skillId"
+        ]
+      ]
+    },
+    "Application": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "vacancyId": {
+          "type": "string",
+          "required": true,
+          "ref": "Vacancy"
+        },
+        "studentProfileId": {
+          "type": "string",
+          "required": true,
+          "ref": "StudentProfile"
+        },
+        "status": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "SENT",
+            "VIEWED",
+            "SHORTLISTED",
+            "INTERVIEW_INVITED",
+            "OFFERED",
+            "HIRED",
+            "REJECTED",
+            "WITHDRAWN"
+          ]
+        },
+        "coverLetter": {
+          "type": "string",
+          "required": false
+        },
+        "createdAt": {
+          "type": "datetime",
+          "required": true
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ]
+      ]
+    },
+    "ApplicationStatusHistory": {
+      "fields": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "applicationId": {
+          "type": "string",
+          "required": true,
+          "ref": "Application"
+        },
+        "fromStatus": {
+          "type": "enum",
+          "required": false,
+          "values": [
+            "SENT",
+            "VIEWED",
+            "SHORTLISTED",
+            "INTERVIEW_INVITED",
+            "OFFERED",
+            "HIRED",
+            "REJECTED",
+            "WITHDRAWN"
+          ]
+        },
+        "toStatus": {
+          "type": "enum",
+          "required": true,
+          "values": [
+            "SENT",
+            "VIEWED",
+            "SHORTLISTED",
+            "INTERVIEW_INVITED",
+            "OFFERED",
+            "HIRED",
+            "REJECTED",
+            "WITHDRAWN"
+          ]
+        },
+        "changedByUserId": {
+          "type": "string",
+          "required": false,
+          "ref": "User"
+        },
+        "createdAt": {
+          "type": "datetime",
+          "required": true
+        }
+      },
+      "unique": [
+        [
+          "id"
+        ]
+      ]
+    }
+  },
+  "dictionaries": {
+    "professions": {
+      "1": "Frontend-розробник",
+      "2": "Backend-розробник",
+      "3": "Fullstack-розробник",
+      "4": "Мобільний розробник",
+      "5": "Інженер з автоматизації тестування",
+      "6": "Інженер з ручного тестування",
+      "7": "DevOps-інженер",
+      "9": "Data-аналітик",
+      "10": "UI/UX-дизайнер",
+      "13": "Бізнес-аналітик"
+    },
+    "skills": {
+      "1": "TypeScript",
+      "2": "Node.js",
+      "3": "React",
+      "7": "Docker",
+      "9": "Git",
+      "13": "Jira",
+      "14": "Postman",
+      "17": "PostgreSQL",
+      "25": "JavaScript",
+      "26": "Python",
+      "27": "Java",
+      "35": "SQL",
+      "37": "REST API",
+      "40": "Unit-тестування",
+      "50": "Робота в команді",
+      "51": "Критичне мислення",
+      "53": "Вирішення проблем",
+      "65": "Аналітичне мислення"
+    }
+  },
+  "salary_limits": {
+    "PER_MONTH": 1000000,
+    "PER_HOUR": 10000
+  },
+  "levels": {
+    "S": {
+      "name": "малий",
+      "pilot_only": false,
+      "counts": {
+        "User": 9,
+        "Company": 2,
+        "HrProfile": 2,
+        "StudentProfile": 7,
+        "Vacancy": 3,
+        "VacancySkill": 9,
+        "Application": 10,
+        "ApplicationStatusHistory": 20
+      },
+      "minimum": [
+        "ApplicationStatusHistory"
+      ],
+      "composition": [
+        "User: 2 користувачі з роллю HR і 7 з роллю STUDENT",
+        "Company: 1 компанія зі статусом перевірки APPROVED і 1 зі статусом PENDING",
+        "HrProfile: по одному HR-фахівцю в кожній компанії",
+        "Vacancy: 1 вакансія ACTIVE, 1 CLOSED, закрита через найм, і 1 DRAFT; вакансії ACTIVE і CLOSED — лише в компаніях зі статусом APPROVED; по одній вакансії від кожного HR-фахівця, решта — будь-якому HR",
+        "VacancySkill: по 3 навички на кожну вакансію",
+        "Application: 10 відгуків на вакансії ACTIVE і CLOSED; серед них щонайменше 1 зі статусом HIRED (по одному на кожну вакансію CLOSED), 1 REJECTED, 1 WITHDRAWN, решта — проміжні статуси (VIEWED, SHORTLISTED, INTERVIEW_INVITED або OFFERED)",
+        "ApplicationStatusHistory: для кожного відгуку — усі зміни його статусу від створення; щонайменше два записи на відгук (створення зі статусом SENT і перехід до поточного статусу)"
+      ],
+      "total": 62,
+      "params": {
+        "hr": 2,
+        "students": 7,
+        "approved": 1,
+        "pending": 1,
+        "active": 1,
+        "closed": 1,
+        "draft": 1,
+        "apps": 10,
+        "hired": 1,
+        "rejected": 1,
+        "withdrawn": 1
+      }
+    },
+    "M": {
+      "name": "середній",
+      "pilot_only": false,
+      "counts": {
+        "User": 18,
+        "Company": 3,
+        "HrProfile": 3,
+        "StudentProfile": 15,
+        "Vacancy": 6,
+        "VacancySkill": 18,
+        "Application": 20,
+        "ApplicationStatusHistory": 40
+      },
+      "minimum": [
+        "ApplicationStatusHistory"
+      ],
+      "composition": [
+        "User: 3 користувачі з роллю HR і 15 з роллю STUDENT",
+        "Company: 2 компанії зі статусом перевірки APPROVED і 1 зі статусом PENDING",
+        "HrProfile: по одному HR-фахівцю в кожній компанії",
+        "Vacancy: 4 вакансії ACTIVE, 1 CLOSED, закрита через найм, і 1 DRAFT; вакансії ACTIVE і CLOSED — лише в компаніях зі статусом APPROVED; по одній вакансії від кожного HR-фахівця, решта — будь-якому HR",
+        "VacancySkill: по 3 навички на кожну вакансію",
+        "Application: 20 відгуків на вакансії ACTIVE і CLOSED; серед них щонайменше 1 зі статусом HIRED (по одному на кожну вакансію CLOSED), 2 REJECTED, 1 WITHDRAWN, решта — проміжні статуси (VIEWED, SHORTLISTED, INTERVIEW_INVITED або OFFERED)",
+        "ApplicationStatusHistory: для кожного відгуку — усі зміни його статусу від створення; щонайменше два записи на відгук (створення зі статусом SENT і перехід до поточного статусу)"
+      ],
+      "total": 123,
+      "params": {
+        "hr": 3,
+        "students": 15,
+        "approved": 2,
+        "pending": 1,
+        "active": 4,
+        "closed": 1,
+        "draft": 1,
+        "apps": 20,
+        "hired": 1,
+        "rejected": 2,
+        "withdrawn": 1
+      }
+    },
+    "L": {
+      "name": "великий",
+      "pilot_only": false,
+      "counts": {
+        "User": 36,
+        "Company": 6,
+        "HrProfile": 6,
+        "StudentProfile": 30,
+        "Vacancy": 12,
+        "VacancySkill": 36,
+        "Application": 40,
+        "ApplicationStatusHistory": 80
+      },
+      "minimum": [
+        "ApplicationStatusHistory"
+      ],
+      "composition": [
+        "User: 6 користувачів з роллю HR і 30 з роллю STUDENT",
+        "Company: 4 компанії зі статусом перевірки APPROVED і 2 зі статусом PENDING",
+        "HrProfile: по одному HR-фахівцю в кожній компанії",
+        "Vacancy: 8 вакансій ACTIVE, 2 CLOSED, закриті через найм, і 2 DRAFT; вакансії ACTIVE і CLOSED — лише в компаніях зі статусом APPROVED; по одній вакансії від кожного HR-фахівця, решта — будь-якому HR",
+        "VacancySkill: по 3 навички на кожну вакансію",
+        "Application: 40 відгуків на вакансії ACTIVE і CLOSED; серед них щонайменше 2 зі статусом HIRED (по одному на кожну вакансію CLOSED), 4 REJECTED, 2 WITHDRAWN, решта — проміжні статуси (VIEWED, SHORTLISTED, INTERVIEW_INVITED або OFFERED)",
+        "ApplicationStatusHistory: для кожного відгуку — усі зміни його статусу від створення; щонайменше два записи на відгук (створення зі статусом SENT і перехід до поточного статусу)"
+      ],
+      "total": 246,
+      "params": {
+        "hr": 6,
+        "students": 30,
+        "approved": 4,
+        "pending": 2,
+        "active": 8,
+        "closed": 2,
+        "draft": 2,
+        "apps": 40,
+        "hired": 2,
+        "rejected": 4,
+        "withdrawn": 2
+      }
+    },
+    "XL": {
+      "name": "дуже великий",
+      "pilot_only": true,
+      "counts": {
+        "User": 54,
+        "Company": 9,
+        "HrProfile": 9,
+        "StudentProfile": 45,
+        "Vacancy": 18,
+        "VacancySkill": 54,
+        "Application": 60,
+        "ApplicationStatusHistory": 61
+      },
+      "minimum": [
+        "ApplicationStatusHistory"
+      ],
+      "composition": [
+        "User: 9 користувачів з роллю HR і 45 з роллю STUDENT",
+        "Company: 6 компаній зі статусом перевірки APPROVED і 3 зі статусом PENDING",
+        "HrProfile: по одному HR-фахівцю в кожній компанії",
+        "Vacancy: 12 вакансій ACTIVE, 3 CLOSED, закриті через найм, і 3 DRAFT; вакансії ACTIVE і CLOSED — лише в компаніях зі статусом APPROVED; по одній вакансії від кожного HR-фахівця, решта — будь-якому HR",
+        "VacancySkill: по 3 навички на кожну вакансію",
+        "Application: 60 відгуків на вакансії ACTIVE і CLOSED; серед них щонайменше 3 зі статусом HIRED (по одному на кожну вакансію CLOSED), 6 REJECTED, 3 WITHDRAWN, решта — проміжні статуси",
+        "ApplicationStatusHistory: для кожного відгуку — усі зміни його статусу від створення"
+      ],
+      "total": 369,
+      "params": {
+        "hr": 9,
+        "students": 45,
+        "approved": 6,
+        "pending": 3,
+        "active": 12,
+        "closed": 3,
+        "draft": 3,
+        "apps": 60,
+        "hired": 3,
+        "rejected": 6,
+        "withdrawn": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "User": [
+    {
+      "id": "u1",
+      "clerkUserId": "clerk_abc123",
+      "email": "olena.kovalenko@example.com",
+      "role": "STUDENT"
+    },
+    {
+      "id": "u2",
+      "clerkUserId": "clerk_def456",
+      "email": "maksym.shevchenko@example.com",
+      "role": "STUDENT"
+    },
+    {
+      "id": "u3",
+      "clerkUserId": "clerk_ghi789",
+      "email": "iryna.bondar@example.com",
+      "role": "EMPLOYER"
+    }
+  ],
+  "StudentProfile": [
+    {
+      "id": "sp1",
+      "userId": "u1",
+      "firstName": "Олена",
+      "lastName": "Коваленко",
+      "university": "КНУ імені Тараса Шевченка",
+      "faculty": "Факультет комп'ютерних наук",
+      "course": 3,
+      "bio": "Студентка, цікавлюся веб-розробкою та штучним інтелектом."
+    },
+    {
+      "id": "sp2",
+      "userId": "u2",
+      "firstName": "Максим",
+      "lastName": "Шевченко",
+      "university": "НТУУ КПІ",
+      "faculty": "Факультет інформатики та обчислювальної техніки",
+      "course": 2,
+      "bio": "Початківець у backend-розробці, вивчаю Python та PostgreSQL."
+    }
+  ],
+  "EmployerProfile": [
+    {
+      "id": "ep1",
+      "userId": "u3",
+      "companyName": "ТехноСтарт",
+      "website": "https://technostart.example.com",
+      "description": "Молода IT-компанія, що спеціалізується на веб-додатках.",
+      "verified": true
+    }
+  ],
+  "Job": [
+    {
+      "id": "j1",
+      "employerId": "ep1",
+      "title": "Junior Frontend Developer",
+      "description": "Розробка інтерфейсів на React. Гнучкий графік для студентів.",
+      "location": "Київ",
+      "salary": 15000,
+      "employmentType": "PART_TIME",
+      "createdAt": "2024-05-01T10:00:00Z",
+      "isActive": true
+    },
+    {
+      "id": "j2",
+      "employerId": "ep1",
+      "title": "Стажер з тестування",
+      "description": "Ручне тестування веб-додатків, складання тест-кейсів.",
+      "location": "Львів",
+      "salary": 10000,
+      "employmentType": "INTERNSHIP",
+      "createdAt": "2024-05-03T12:30:00Z",
+      "isActive": true
+    }
+  ],
+  "Application": [
+    {
+      "id": "a1",
+      "jobId": "j1",
+      "studentId": "sp1",
+      "status": "PENDING",
+      "appliedAt": "2024-05-05T09:15:00Z",
+      "coverLetter": "Маю досвід з React та хочу розвиватися у вашій компанії."
+    },
+    {
+      "id": "a2",
+      "jobId": "j2",
+      "studentId": "sp2",
+      "status": "REVIEWED",
+      "appliedAt": "2024-05-06T14:45:00Z",
+      "coverLetter": "Цікавлюся тестуванням, уважний до деталей."
+    }
+  ],
+  "Skill": [
+    {
+      "id": "s1",
+      "name": "JavaScript"
+    },
+    {
+      "id": "s2",
+      "name": "React"
+    },
+    {
+      "id": "s3",
+      "name": "Python"
+    },
+    {
+      "id": "s4",
+      "name": "PostgreSQL"
+    }
+  ],
+  "StudentSkill": [
+    {
+      "id": "ss1",
+      "studentId": "sp1",
+      "skillId": "s1",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": "ss2",
+      "studentId": "sp1",
+      "skillId": "s2",
+      "level": "BEGINNER"
+    },
+    {
+      "id": "ss3",
+      "studentId": "sp2",
+      "skillId": "s3",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": "ss4",
+      "studentId": "sp2",
+      "skillId": "s4",
+      "level": "BEGINNER"
+    }
+  ],
+  "JobSkill": [
+    {
+      "id": "js1",
+      "jobId": "j1",
+      "skillId": "s1",
+      "requiredLevel": "INTERMEDIATE"
+    },
+    {
+      "id": "js2",
+      "jobId": "j1",
+      "skillId": "s2",
+      "requiredLevel": "BEGINNER"
+    },
+    {
+      "id": "js3",
+      "jobId": "j2",
+      "skillId": "s4",
+      "requiredLevel": "BEGINNER"
+    }
+  ]
+}

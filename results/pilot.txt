@@ -1,0 +1,567 @@
+Результати пілоту
+Джерело: журнал logs/pilot_log.xlsx, аркуш «Журнал»; файл створює tools/run_all.py.
+
+Позначення
+  Г1, Г2, Г3 — частка порушених перевірок, %: Г1 — правила 1.3–1.6, Г2 — 2.1–2.6, Г3 — 3.1–3.10
+  Г2* — група 2 без правила 2.5; Г3° — група 3 без правил 3.1–3.3
+  Заг — усі правила 1.3–3.10; Заг* — усі правила без 2.5 (за Г2*, Г3 і Заг* перевіряються H1 і H2)
+  2.5 — правило 2.5 «дата завершення активної вакансії пізніша за дату запуску»: порушено / оцінено
+  «порушено / оцінено» — кількість перевірок; у дужках — перевірки з результатом «не оцінюється»
+  «—» — значення немає: відповідь не прочитано або поле журналу не заповнено
+
+
+1. Запуски
+
+№   Модель    Обсяг  Назва моделі в інтерфейсі               Дата        Хв    «Продовжити»  Стан   Оцінка обсягу  Файл відповіді
+--  --------  -----  --------------------------------------  ----------  ----  ------------  -----  -------------  ------------------------------------------
+ 1  ChatGPT   S      GPT-6 (режим Instant)                   07.11.2026     1             0  повна  у межах        answers/pilot/chatgpt/gpt_pilot_S.txt
+ 2  ChatGPT   M      GPT-6 (режим Instant)                   08.11.2026   1,5             0  повна  у межах        answers/pilot/chatgpt/gpt_pilot_M.txt
+ 3  ChatGPT   L      GPT-Auto                                08.11.2026     1             1  повна  на межі        answers/pilot/chatgpt/gpt_pilot_L.txt
+ 5  Gemini    S      Gemini (режим Більше міркувань)         08.11.2026   0,5             0  повна  у межах        answers/pilot/gemini/gemini_pilot_S.txt
+ 6  Gemini    M      3.6 Міркування                          07.11.2026   0,9             0  повна  у межах        answers/pilot/gemini/gemini_pilot_M-1.txt
+ 7  Gemini    L      Gemini Auto                             08.11.2026   0,7             0  повна  у межах        answers/pilot/gemini/gemini_pilot_L.txt
+ 8  Gemini    XL     3.6 Міркування                          07.11.2026     8             0  повна  у межах        answers/pilot/gemini/gemini_pilot_XL-1.txt
+ 9  DeepSeek  S      DeepSeek-V3.2                           08.11.2026   0,8             0  повна  у межах        answers/pilot/deepseek/ds_pilot_S.txt
+10  DeepSeek  M      DeepSeek-V3.2                           07.11.2026   0,6             1  повна  на межі        answers/pilot/deepseek/ds_pilot_M.txt
+11  DeepSeek  L      DeepSeek-V3.2                           07.11.2026  1,25             2  повна  на межі        answers/pilot/deepseek/ds_pilot_L-1.txt
+12  DeepSeek  XL     DeepSeek-V3.2                           08.11.2026   1,2             1  повна  на межі        answers/pilot/deepseek/ds_pilot_XL.txt
+14  ChatGPT   XL     GPT-6 (режим Міркування)                07.11.2026     9             0  повна  у межах        answers/pilot/chatgpt/gpt_pilot_XL-3.txt
+15  Gemini    M      3.6 Міркування                          07.11.2026   0,9             0  повна  у межах        answers/pilot/gemini/gemini_pilot_M-2.txt
+16  DeepSeek  L      DeepSeek-V3.2 (режим Глибоке мислення)  07.11.2026  1,85             0  повна  у межах        answers/pilot/deepseek/ds_pilot_L-2.txt
+
+
+2. Обсяг відповідей
+
+№   Модель    Обсяг  Стан (валідатор)  Символів  Записів  Відхилення від обсягу  Придатні записи, %  Записи для П1, %
+--  --------  -----  ----------------  --------  -------  ---------------------  ------------------  ----------------
+ 1  ChatGPT   S      прочитано            16674       62                      0               83,87                 0
+ 2  ChatGPT   M      прочитано            33442      144                      0               85,42                 0
+ 3  ChatGPT   L      прочитано            42237      224                     22               81,25                 0
+ 5  Gemini    S      прочитано            12656       52                     10               69,23             14,29
+ 6  Gemini    M      прочитано            28613      122                      1               82,79                 0
+ 7  Gemini    L      прочитано            47411      206                     40               70,39             11,59
+ 8  Gemini    XL     прочитано            92987      416                      0               84,86                 0
+ 9  DeepSeek  S      прочитано            15004       65                      0               84,62                 0
+10  DeepSeek  M      прочитано            24288      134                      0               83,58              0,88
+11  DeepSeek  L      прочитано            55397      263                      0               83,65              0,45
+12  DeepSeek  XL     прочитано             3541        7                    303                   0  —
+14  ChatGPT   XL     прочитано            67353      369                      0               82,93                 0
+15  Gemini    M      прочитано            32544      143                      0               85,31                 0
+16  DeepSeek  L      прочитано            50017      214                     32               80,37                 0
+
+
+3. Частки порушених перевірок, %
+
+№   Модель    Обсяг  Г1    Г2     Г2*  Г3    Г3°    Заг    Заг*   2.5
+--  --------  -----  ----  -----  ---  ----  -----  -----  -----  ------
+ 1  ChatGPT   S      1,57      0    0     0      0   1,14   1,14  0 / 1
+ 2  ChatGPT   M       1,5      0    0     0      0   1,08   1,09  0 / 4
+ 3  ChatGPT   L      1,85      0    0     0      0   1,34   1,34  0 / 8
+ 5  Gemini    S      1,78   6,25    0  2,96  13,64   2,18   2,05  1 / 1
+ 6  Gemini    M      1,66      0    0     0      0    1,2    1,2  0 / 4
+ 7  Gemini    L      1,91      0    0  2,48  11,24   2,02   2,02  0 / 8
+ 8  Gemini    XL     1,52      0    0     0      0   1,09   1,09  0 / 12
+ 9  DeepSeek  S      1,54      0    0     0      0   1,11   1,11  0 / 1
+10  DeepSeek  M      1,54      0    0   0,2   1,12   1,16   1,17  0 / 4
+11  DeepSeek  L      1,57  11,76    0   0,2   1,12    1,4   1,19  8 / 8
+12  DeepSeek  XL       25  —      —       0      0  16,95  16,95  0 / 0
+14  ChatGPT   XL      1,7      0    0     0      0   1,23   1,23  0 / 12
+15  Gemini    M      1,45      0    0     0      0   1,05   1,05  0 / 4
+16  DeepSeek  L      1,91      0    0     0      0   1,36   1,36  0 / 8
+
+
+4. Перевірки за правилами: порушено / оцінено
+
+Правило  №1      №2      №3       №5      №6      №7       №8       №9      №10     №11      №12       №14      №15     №16
+-------  ------  ------  -------  ------  ------  -------  -------  ------  ------  -------  --------  -------  ------  -------
+1.1      0/1     0/1     0/1      0/1     0/1     0/1      0/1      0/1     0/1     0/1      0/1       0/1      0/1     0/1
+1.2      0/1     0/1     0/1      0/1     0/1     0/1      0/1      0/1     0/1     0/1      1/1       0/1      0/1     0/1
+1.3      0/62    0/144   0/224    0/52    0/122   0/206    0/416    0/65    0/134   0/263    7/7       0/369    0/143   0/214
+1.4      10/401  21/894  42/1422  10/353  21/802  42/1377  63/2670  10/414  21/868  42/1710  0/22      63/2340  21/930  42/1389
+1.5      0/94    0/226   0/324    0/80    0/184   0/311    0/652    0/99    0/207   0/404    3/5       0/541    0/226   0/306
+1.6      0/79    0/138   0/296    0/76    0/154   0/300    0/414    0/72    0/151   0/293    0/6       0/457    0/151   0/294
+2.1      0/3     0/5     0/9      0/3     0/6     0/12     0/18     0/2     0/6     0/12     0/0       0/17     0/6     0/10
+2.2      0/3     0/5     0/9      0/3     0/6     0/12     0/15     0/2     0/6     0/12     0/0       0/17     0/6     0/10
+2.3      0/3     0/5     0/9      0/3     0/6     0/12     0/15     0/2     0/6     0/12     0/0       0/17     0/6     0/10
+2.4      0/3     0/5     0/9      0/3     0/6     0/12     0/18     0/2     0/6     0/12     0/0       0/17     0/6     0/10
+2.5      0/1     0/4     0/8      1/1     0/4     0/8      0/12     0/1     0/4     8/8      0/0       0/12     0/4     0/8
+2.6      0/3     0/6     0/12     0/3     0/6     0/12     0/18     0/3     0/6     0/12     0/0       0/18     0/6     0/12
+3.1      0/91    0/201   0/338    0/81    0/179   0/320    0/587    0/94    0/191   0/377    0/15      0/540    0/200   0/328
+3.2      0/76    0/193   0/258    0/66    0/169   0/262    0/607    0/92    0/193   0/376    0/2       0/453    0/211   0/278
+3.3      0/12    0/24    0/48     0/12    0/24    0/48     0/72     0/12    0/24    0/48     0/0       0/72     0/24    0/48
+3.4      0/9     0/18    0/36     0/9     0/18    0/36     0/54     0/9     0/18    0/36     0/2       0/54     0/18    0/36
+3.5      0/3     0/6     0/12     0/3     0/6     0/12     0/18     0/3     0/6     0/12     0/0       0/18     0/6     0/12
+3.6      0/1     0/4     0/8      0/1     0/4     0/8      0/12     0/1     0/4     0/8      0/0       0/12     0/4     0/8
+3.7      0/10    0/20    0/40     0/10    0/20    1/40     0/60     0/10    0/20    1/40     0/0 (+2)  0/60     0/20    0/40
+3.8      0/10    0/20    0/40     0/10    0/20    0/40     0/60     0/10    0/20    0/40     0/0 (+2)  0/60     0/20    0/40
+3.9      0/10    0/20    0/40     6/10    0/20    19/40    0/60     0/10    1/20    0/40     0/0 (+2)  0/60     0/20    0/40
+3.10     0/1     0/1     0/2      0/1     0/1     0/2      0/3      0/1     0/1     1/3      0/0       0/3      0/1     0/2
+
+
+5. Порушення й неоцінені перевірки
+
+Файл відповіді                              Етап  Правило  Таблиця         № запису  id запису  Результат      Деталі
+------------------------------------------  ----  -------  --------------  --------  ---------  -------------  -------------------------------------------------------------------
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         1  sp1        порушено       birthDate=2003-05-14
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         2  sp2        порушено       birthDate=2002-09-21
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         3  sp3        порушено       birthDate=2004-02-11
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         4  sp4        порушено       birthDate=2003-11-08
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         5  sp5        порушено       birthDate=2002-07-19
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         6  sp6        порушено       birthDate=2004-01-25
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      StudentProfile         7  sp7        порушено       birthDate=2003-08-30
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-15
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      Vacancy                2  v2         порушено       closingDate=2026-10-20
+answers/pilot/chatgpt/gpt_pilot_S.txt          2  1.4      Vacancy                3  v3         порушено       closingDate=2027-01-31
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         1  sp1        порушено       birthDate=2003-02-07
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         2  sp2        порушено       birthDate=2003-03-16
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         3  sp3        порушено       birthDate=2003-04-22
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         4  sp4        порушено       birthDate=2003-05-29
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         5  sp5        порушено       birthDate=2003-07-05
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         6  sp6        порушено       birthDate=2003-08-11
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         7  sp7        порушено       birthDate=2003-09-17
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         8  sp8        порушено       birthDate=2003-10-24
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile         9  sp9        порушено       birthDate=2003-11-30
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        10  sp10       порушено       birthDate=2004-01-06
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        11  sp11       порушено       birthDate=2004-02-12
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        12  sp12       порушено       birthDate=2004-03-20
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        13  sp13       порушено       birthDate=2004-04-26
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        14  sp14       порушено       birthDate=2004-06-02
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      StudentProfile        15  sp15       порушено       birthDate=2004-07-09
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-20
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-25
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-28
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-30
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                5  v5         порушено       closingDate=2026-10-01
+answers/pilot/chatgpt/gpt_pilot_M.txt          2  1.4      Vacancy                6  v6         порушено       closingDate=2027-01-31
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         1  s1         порушено       birthDate=2001-01-01
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         2  s2         порушено       birthDate=2002-02-02
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         3  s3         порушено       birthDate=2003-03-03
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         4  s4         порушено       birthDate=2004-04-04
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         5  s5         порушено       birthDate=2005-05-05
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         6  s6         порушено       birthDate=2006-06-06
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         7  s7         порушено       birthDate=2001-07-07
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         8  s8         порушено       birthDate=2002-08-08
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile         9  s9         порушено       birthDate=2003-09-09
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        10  s10        порушено       birthDate=2004-10-10
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        11  s11        порушено       birthDate=2005-11-11
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        12  s12        порушено       birthDate=2006-12-12
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        13  s13        порушено       birthDate=2001-01-13
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        14  s14        порушено       birthDate=2002-02-14
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        15  s15        порушено       birthDate=2003-03-15
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        16  s16        порушено       birthDate=2004-04-16
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        17  s17        порушено       birthDate=2005-05-17
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        18  s18        порушено       birthDate=2006-06-18
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        19  s19        порушено       birthDate=2001-07-19
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        20  s20        порушено       birthDate=2002-08-20
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        21  s21        порушено       birthDate=2003-09-21
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        22  s22        порушено       birthDate=2004-10-22
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        23  s23        порушено       birthDate=2005-11-23
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        24  s24        порушено       birthDate=2006-12-24
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        25  s25        порушено       birthDate=2001-01-25
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        26  s26        порушено       birthDate=2002-02-26
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        27  s27        порушено       birthDate=2003-03-27
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        28  s28        порушено       birthDate=2004-04-01
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        29  s29        порушено       birthDate=2005-05-02
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      StudentProfile        30  s30        порушено       birthDate=2006-06-03
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-11
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-12
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-13
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-14
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                5  v5         порушено       closingDate=2026-12-15
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-16
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                7  v7         порушено       closingDate=2026-12-17
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                8  v8         порушено       closingDate=2026-12-18
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy                9  v9         порушено       closingDate=2026-10-24
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy               10  v10        порушено       closingDate=2026-10-25
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy               11  v11        порушено       closingDate=2027-01-15
+answers/pilot/chatgpt/gpt_pilot_L.txt          2  1.4      Vacancy               12  v12        порушено       closingDate=2027-01-15
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         1  s1         порушено       birthDate=2004-05-12
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         2  s2         порушено       birthDate=2005-08-20
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         3  s3         порушено       birthDate=2003-02-15
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         4  s4         порушено       birthDate=2004-11-05
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         5  s5         порушено       birthDate=2003-07-30
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         6  s6         порушено       birthDate=2004-03-25
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      StudentProfile         7  s7         порушено       birthDate=2005-01-10
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      Vacancy                1  v1         порушено       closingDate=2026-06-01
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      Vacancy                2  v2         порушено       closingDate=2026-03-01
+answers/pilot/gemini/gemini_pilot_S.txt        2  1.4      Vacancy                3  v3         порушено       closingDate=2026-06-30
+answers/pilot/gemini/gemini_pilot_S.txt        3  2.5      Vacancy                1  v1         порушено       closingDate=2026-06-01
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application            3  app3       порушено       немає історії
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application            4  app4       порушено       немає історії
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application            6  app6       порушено       немає історії
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application            8  app8       порушено       немає історії
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application            9  app9       порушено       немає історії
+answers/pilot/gemini/gemini_pilot_S.txt        4  3.9      Application           10  app10      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         1  sp1        порушено       birthDate=2004-05-14
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         2  sp2        порушено       birthDate=2005-02-20
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         3  sp3        порушено       birthDate=2003-11-10
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         4  sp4        порушено       birthDate=2004-08-05
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         5  sp5        порушено       birthDate=2004-01-30
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         6  sp6        порушено       birthDate=2005-06-12
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         7  sp7        порушено       birthDate=2003-04-18
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         8  sp8        порушено       birthDate=2004-09-25
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile         9  sp9        порушено       birthDate=2003-12-01
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        10  sp10       порушено       birthDate=2005-03-15
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        11  sp11       порушено       birthDate=2004-07-22
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        12  sp12       порушено       birthDate=2004-03-09
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        13  sp13       порушено       birthDate=2005-01-17
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        14  sp14       порушено       birthDate=2003-10-04
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      StudentProfile        15  sp15       порушено       birthDate=2004-12-19
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                2  v2         порушено       closingDate=2026-03-20
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                5  v5         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-1.txt      2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         1  sp1        порушено       birthDate=2004-05-12
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         2  sp2        порушено       birthDate=2005-03-22
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         3  sp3        порушено       birthDate=2004-07-15
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         4  sp4        порушено       birthDate=2005-01-10
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         5  sp5        порушено       birthDate=2004-09-30
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         6  sp6        порушено       birthDate=2005-11-05
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         7  sp7        порушено       birthDate=2004-02-18
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         8  sp8        порушено       birthDate=2005-06-25
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile         9  sp9        порушено       birthDate=2004-12-01
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        10  sp10       порушено       birthDate=2005-04-14
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        11  sp11       порушено       birthDate=2004-08-19
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        12  sp12       порушено       birthDate=2005-10-11
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        13  sp13       порушено       birthDate=2004-03-03
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        14  sp14       порушено       birthDate=2005-07-20
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        15  sp15       порушено       birthDate=2004-11-28
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        16  sp16       порушено       birthDate=2005-02-14
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        17  sp17       порушено       birthDate=2004-05-09
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        18  sp18       порушено       birthDate=2005-09-17
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        19  sp19       порушено       birthDate=2004-01-25
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        20  sp20       порушено       birthDate=2005-12-08
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        21  sp21       порушено       birthDate=2004-06-11
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        22  sp22       порушено       birthDate=2005-08-30
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        23  sp23       порушено       birthDate=2004-04-04
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        24  sp24       порушено       birthDate=2005-05-19
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        25  sp25       порушено       birthDate=2004-10-21
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        26  sp26       порушено       birthDate=2005-01-29
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        27  sp27       порушено       birthDate=2004-07-07
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        28  sp28       порушено       birthDate=2005-03-15
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        29  sp29       порушено       birthDate=2004-11-12
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      StudentProfile        30  sp30       порушено       birthDate=2005-06-02
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                5  v5         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                7  v7         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                8  v8         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy                9  v9         порушено       closingDate=2026-02-15
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy               10  v10        порушено       closingDate=2026-02-20
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy               11  v11        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        2  1.4      Vacancy               12  v12        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.7      Application           29  app29      порушено       повторює відгук app2
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           22  app22      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           23  app23      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           24  app24      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           25  app25      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           26  app26      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           27  app27      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           28  app28      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           29  app29      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           30  app30      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           31  app31      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           32  app32      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           33  app33      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           34  app34      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           35  app35      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           36  app36      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           37  app37      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           38  app38      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           39  app39      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_L.txt        4  3.9      Application           40  app40      порушено       немає історії
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         1  sp1        порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         2  sp2        порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         3  sp3        порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         4  sp4        порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         5  sp5        порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         6  sp6        порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         7  sp7        порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         8  sp8        порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile         9  sp9        порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        10  sp10       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        11  sp11       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        12  sp12       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        13  sp13       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        14  sp14       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        15  sp15       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        16  sp16       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        17  sp17       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        18  sp18       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        19  sp19       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        20  sp20       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        21  sp21       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        22  sp22       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        23  sp23       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        24  sp24       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        25  sp25       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        26  sp26       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        27  sp27       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        28  sp28       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        29  sp29       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        30  sp30       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        31  sp31       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        32  sp32       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        33  sp33       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        34  sp34       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        35  sp35       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        36  sp36       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        37  sp37       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        38  sp38       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        39  sp39       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        40  sp40       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        41  sp41       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        42  sp42       порушено       birthDate=2003-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        43  sp43       порушено       birthDate=2004-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        44  sp44       порушено       birthDate=2005-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      StudentProfile        45  sp45       порушено       birthDate=2002-05-15
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                1  v1         порушено       closingDate=2026-03-01
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                2  v2         порушено       closingDate=2026-03-01
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                3  v3         порушено       closingDate=2026-03-01
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                5  v5         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                7  v7         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                8  v8         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy                9  v9         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               10  v10        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               11  v11        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               12  v12        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               13  v13        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               14  v14        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               15  v15        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               16  v16        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               17  v17        порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_XL-1.txt     2  1.4      Vacancy               18  v18        порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         1  sp1        порушено       birthDate=2004-03-12
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         2  sp2        порушено       birthDate=2003-09-25
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         3  sp3        порушено       birthDate=2005-01-18
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         4  sp4        порушено       birthDate=2004-07-30
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         5  sp5        порушено       birthDate=2003-12-05
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         6  sp6        порушено       birthDate=2005-05-14
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      StudentProfile         7  sp7        порушено       birthDate=2004-11-22
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      Vacancy                1  v1         порушено       closingDate=2027-01-15
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      Vacancy                2  v2         порушено       closingDate=2026-09-15
+answers/pilot/deepseek/ds_pilot_S.txt          2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         1  sp1        порушено       birthDate=2002-05-14
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         2  sp2        порушено       birthDate=2003-08-22
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         3  sp3        порушено       birthDate=2001-11-03
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         4  sp4        порушено       birthDate=2002-02-17
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         5  sp5        порушено       birthDate=2003-04-29
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         6  sp6        порушено       birthDate=2002-09-12
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         7  sp7        порушено       birthDate=2001-06-05
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         8  sp8        порушено       birthDate=2003-01-25
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile         9  sp9        порушено       birthDate=2002-12-08
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        10  sp10       порушено       birthDate=2001-07-19
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        11  sp11       порушено       birthDate=2003-03-30
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        12  sp12       порушено       birthDate=2002-10-11
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        13  sp13       порушено       birthDate=2001-09-27
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        14  sp14       порушено       birthDate=2003-06-16
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      StudentProfile        15  sp15       порушено       birthDate=2002-08-04
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                5  v5         порушено       closingDate=2025-10-15
+answers/pilot/deepseek/ds_pilot_M.txt          2  1.4      Vacancy                6  v6         порушено       closingDate=2026-06-30
+answers/pilot/deepseek/ds_pilot_M.txt          4  3.9      Application            8  a8         порушено       останній статус в історії SENT, у відгуку WITHDRAWN
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         1  sp1        порушено       birthDate=2003-05-14
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         2  sp2        порушено       birthDate=2002-11-22
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         3  sp3        порушено       birthDate=2004-02-08
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         4  sp4        порушено       birthDate=2003-07-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         5  sp5        порушено       birthDate=2004-09-12
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         6  sp6        порушено       birthDate=2002-03-18
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         7  sp7        порушено       birthDate=2003-12-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         8  sp8        порушено       birthDate=2004-06-25
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile         9  sp9        порушено       birthDate=2003-08-19
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        10  sp10       порушено       birthDate=2002-01-10
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        11  sp11       порушено       birthDate=2004-04-05
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        12  sp12       порушено       birthDate=2003-10-27
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        13  sp13       порушено       birthDate=2002-05-16
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        14  sp14       порушено       birthDate=2004-07-07
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        15  sp15       порушено       birthDate=2003-02-14
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        16  sp16       порушено       birthDate=2002-09-09
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        17  sp17       порушено       birthDate=2004-11-11
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        18  sp18       порушено       birthDate=2003-03-23
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        19  sp19       порушено       birthDate=2002-06-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        20  sp20       порушено       birthDate=2004-01-19
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        21  sp21       порушено       birthDate=2003-04-02
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        22  sp22       порушено       birthDate=2002-12-12
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        23  sp23       порушено       birthDate=2004-08-08
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        24  sp24       порушено       birthDate=2003-06-06
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        25  sp25       порушено       birthDate=2002-02-02
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        26  sp26       порушено       birthDate=2004-10-10
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        27  sp27       порушено       birthDate=2003-01-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        28  sp28       порушено       birthDate=2002-07-17
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        29  sp29       порушено       birthDate=2004-03-03
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      StudentProfile        30  sp30       порушено       birthDate=2003-09-29
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                1  v1         порушено       closingDate=2025-12-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                2  v2         порушено       closingDate=2025-11-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                3  v3         порушено       closingDate=2025-12-15
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                4  v4         порушено       closingDate=2025-10-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                5  v5         порушено       closingDate=2025-09-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                6  v6         порушено       closingDate=2025-11-15
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                7  v7         порушено       closingDate=2025-12-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                8  v8         порушено       closingDate=2025-10-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy                9  v9         порушено       closingDate=2024-12-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy               10  v10        порушено       closingDate=2024-12-15
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy               11  v11        порушено       closingDate=2025-06-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        2  1.4      Vacancy               12  v12        порушено       closingDate=2025-07-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                1  v1         порушено       closingDate=2025-12-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                2  v2         порушено       closingDate=2025-11-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                3  v3         порушено       closingDate=2025-12-15
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                4  v4         порушено       closingDate=2025-10-31
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                5  v5         порушено       closingDate=2025-09-30
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                6  v6         порушено       closingDate=2025-11-15
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                7  v7         порушено       closingDate=2025-12-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        3  2.5      Vacancy                8  v8         порушено       closingDate=2025-10-01
+answers/pilot/deepseek/ds_pilot_L-1.txt        4  3.7      Application           36  a36        порушено       повторює відгук a15
+answers/pilot/deepseek/ds_pilot_L-1.txt        4  3.10     Vacancy                1  v1         порушено       вакансія ACTIVE/None
+answers/pilot/deepseek/ds_pilot_XL.txt         1  1.2      —               —         —          порушено       Company, HrProfile, Vacancy, VacancySkill, ApplicationStatusHistory
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      User                   1  u1         порушено       status, firstName, lastName, createdAt
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      User                   2  u2         порушено       status, firstName, lastName, createdAt
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      User                   3  u3         порушено       status, firstName, lastName, createdAt
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.5      User                   3  u3         порушено       role=EMPLOYER
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      StudentProfile         1  sp1        порушено       birthDate, contactEmail, primaryPhone, visibility
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      StudentProfile         2  sp2        порушено       birthDate, contactEmail, primaryPhone, visibility
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      Application            1  a1         порушено       vacancyId, studentProfileId, createdAt
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.5      Application            1  a1         порушено       status=PENDING
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.3      Application            2  a2         порушено       vacancyId, studentProfileId, createdAt
+answers/pilot/deepseek/ds_pilot_XL.txt         2  1.5      Application            2  a2         порушено       status=REVIEWED
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.7      Application            1  a1         не оцінюється  —
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.8      Application            1  a1         не оцінюється  —
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.7      Application            2  a2         не оцінюється  —
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.8      Application            2  a2         не оцінюється  —
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.9      Application            1  a1         не оцінюється  —
+answers/pilot/deepseek/ds_pilot_XL.txt         4  3.9      Application            2  a2         не оцінюється  —
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         1  s1         порушено       birthDate=2003-02-02
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         2  s2         порушено       birthDate=2004-03-03
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         3  s3         порушено       birthDate=2005-04-04
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         4  s4         порушено       birthDate=2006-05-05
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         5  s5         порушено       birthDate=2002-06-06
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         6  s6         порушено       birthDate=2003-07-07
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         7  s7         порушено       birthDate=2004-08-08
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         8  s8         порушено       birthDate=2005-09-09
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile         9  s9         порушено       birthDate=2006-10-10
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        10  s10        порушено       birthDate=2002-11-11
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        11  s11        порушено       birthDate=2003-12-12
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        12  s12        порушено       birthDate=2004-01-13
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        13  s13        порушено       birthDate=2005-02-14
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        14  s14        порушено       birthDate=2006-03-15
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        15  s15        порушено       birthDate=2002-04-16
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        16  s16        порушено       birthDate=2003-05-17
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        17  s17        порушено       birthDate=2004-06-18
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        18  s18        порушено       birthDate=2005-07-19
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        19  s19        порушено       birthDate=2006-08-20
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        20  s20        порушено       birthDate=2002-09-21
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        21  s21        порушено       birthDate=2003-10-22
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        22  s22        порушено       birthDate=2004-11-23
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        23  s23        порушено       birthDate=2005-12-24
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        24  s24        порушено       birthDate=2006-01-25
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        25  s25        порушено       birthDate=2002-02-26
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        26  s26        порушено       birthDate=2003-03-01
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        27  s27        порушено       birthDate=2004-04-02
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        28  s28        порушено       birthDate=2005-05-03
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        29  s29        порушено       birthDate=2006-06-04
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        30  s30        порушено       birthDate=2002-07-05
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        31  s31        порушено       birthDate=2003-08-06
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        32  s32        порушено       birthDate=2004-09-07
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        33  s33        порушено       birthDate=2005-10-08
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        34  s34        порушено       birthDate=2006-11-09
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        35  s35        порушено       birthDate=2002-12-10
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        36  s36        порушено       birthDate=2003-01-11
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        37  s37        порушено       birthDate=2004-02-12
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        38  s38        порушено       birthDate=2005-03-13
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        39  s39        порушено       birthDate=2006-04-14
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        40  s40        порушено       birthDate=2002-05-15
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        41  s41        порушено       birthDate=2003-06-16
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        42  s42        порушено       birthDate=2004-07-17
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        43  s43        порушено       birthDate=2005-08-18
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        44  s44        порушено       birthDate=2006-09-19
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      StudentProfile        45  s45        порушено       birthDate=2002-10-20
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                1  v1         порушено       closingDate=2027-01-15
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                2  v2         порушено       closingDate=2027-01-18
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                3  v3         порушено       closingDate=2027-01-20
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                4  v4         порушено       closingDate=2027-01-22
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                5  v5         порушено       closingDate=2027-01-25
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                6  v6         порушено       closingDate=2027-01-27
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                7  v7         порушено       closingDate=2027-01-29
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                8  v8         порушено       closingDate=2027-02-01
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy                9  v9         порушено       closingDate=2027-02-03
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               10  v10        порушено       closingDate=2027-02-05
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               11  v11        порушено       closingDate=2027-02-07
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               12  v12        порушено       closingDate=2027-02-09
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               13  v13        порушено       closingDate=2026-10-10
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               14  v14        порушено       closingDate=2026-10-12
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               15  v15        порушено       closingDate=2026-10-14
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               16  v16        порушено       closingDate=2027-02-15
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               17  v17        порушено       closingDate=2027-02-17
+answers/pilot/chatgpt/gpt_pilot_XL-3.txt       2  1.4      Vacancy               18  v18        порушено       closingDate=2027-02-20
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         1  sp1        порушено       birthDate=2004-05-14
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         2  sp2        порушено       birthDate=2003-11-20
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         3  sp3        порушено       birthDate=2005-02-01
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         4  sp4        порушено       birthDate=2004-08-09
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         5  sp5        порушено       birthDate=2003-03-30
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         6  sp6        порушено       birthDate=2004-12-12
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         7  sp7        порушено       birthDate=2005-01-15
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         8  sp8        порушено       birthDate=2004-06-25
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile         9  sp9        порушено       birthDate=2003-09-18
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        10  sp10       порушено       birthDate=2004-04-05
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        11  sp11       порушено       birthDate=2005-07-22
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        12  sp12       порушено       birthDate=2004-10-10
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        13  sp13       порушено       birthDate=2003-01-08
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        14  sp14       порушено       birthDate=2004-03-17
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      StudentProfile        15  sp15       порушено       birthDate=2005-05-05
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                3  v3         порушено       closingDate=2026-04-01
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                5  v5         порушено       closingDate=2026-12-31
+answers/pilot/gemini/gemini_pilot_M-2.txt      2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         1  s1         порушено       birthDate=2003-04-12
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         2  s2         порушено       birthDate=2002-09-03
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         3  s3         порушено       birthDate=2004-01-25
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         4  s4         порушено       birthDate=2001-11-17
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         5  s5         порушено       birthDate=2003-06-08
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         6  s6         порушено       birthDate=2002-03-30
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         7  s7         порушено       birthDate=2004-08-14
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         8  s8         порушено       birthDate=2001-12-05
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile         9  s9         порушено       birthDate=2003-02-19
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        10  s10        порушено       birthDate=2002-07-22
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        11  s11        порушено       birthDate=2004-05-11
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        12  s12        порушено       birthDate=2001-10-02
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        13  s13        порушено       birthDate=2003-09-16
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        14  s14        порушено       birthDate=2002-01-28
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        15  s15        порушено       birthDate=2004-03-07
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        16  s16        порушено       birthDate=2001-06-23
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        17  s17        порушено       birthDate=2003-11-09
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        18  s18        порушено       birthDate=2002-04-15
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        19  s19        порушено       birthDate=2004-02-21
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        20  s20        порушено       birthDate=2001-08-13
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        21  s21        порушено       birthDate=2003-12-01
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        22  s22        порушено       birthDate=2002-05-26
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        23  s23        порушено       birthDate=2004-07-18
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        24  s24        порушено       birthDate=2001-09-29
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        25  s25        порушено       birthDate=2003-03-04
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        26  s26        порушено       birthDate=2002-10-20
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        27  s27        порушено       birthDate=2004-06-06
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        28  s28        порушено       birthDate=2001-04-24
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        29  s29        порушено       birthDate=2003-08-31
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      StudentProfile        30  s30        порушено       birthDate=2002-12-12
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                1  v1         порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                2  v2         порушено       closingDate=2026-12-15
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                3  v3         порушено       closingDate=2026-12-10
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                4  v4         порушено       closingDate=2026-12-20
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                5  v5         порушено       closingDate=2026-11-30
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                6  v6         порушено       closingDate=2026-12-01
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                7  v7         порушено       closingDate=2026-12-05
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                8  v8         порушено       closingDate=2026-12-25
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy                9  v9         порушено       closingDate=2026-04-30
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy               10  v10        порушено       closingDate=2026-04-25
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy               11  v11        порушено       closingDate=2026-12-31
+answers/pilot/deepseek/ds_pilot_L-2.txt        2  1.4      Vacancy               12  v12        порушено       closingDate=2026-12-31
