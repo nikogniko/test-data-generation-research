@@ -1,0 +1,10 @@
+{
+  "User": [],
+  "Company": [],
+  "HrProfile": [],
+  "StudentProfile": [],
+  "Vacancy": [],
+  "VacancySkill": [],
+  "Application": [],
+  "ApplicationStatusHistory": []
+}

@@ -1,0 +1,576 @@
+{
+  "User": [
+    {
+      "id": "u1",
+      "clerkUserId": "clerk_hr_001_test",
+      "email": "olena.koval@techvista.example",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Олена",
+      "lastName": "Коваль",
+      "middleName": "Ігорівна",
+      "createdAt": "2026-01-10T09:00:00Z"
+    },
+    {
+      "id": "u2",
+      "clerkUserId": "clerk_hr_002_test",
+      "email": "andrii.melnyk@softbridge.example",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Андрій",
+      "lastName": "Мельник",
+      "middleName": "Олександрович",
+      "createdAt": "2026-02-15T10:30:00Z"
+    },
+    {
+      "id": "u3",
+      "clerkUserId": "clerk_st_001_test",
+      "email": "maksym.bondar@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Максим",
+      "lastName": "Бондар",
+      "middleName": "Сергійович",
+      "createdAt": "2026-03-01T08:00:00Z"
+    },
+    {
+      "id": "u4",
+      "clerkUserId": "clerk_st_002_test",
+      "email": "anastasiia.shevchenko@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Анастасія",
+      "lastName": "Шевченко",
+      "middleName": "Романівна",
+      "createdAt": "2026-03-05T11:20:00Z"
+    },
+    {
+      "id": "u5",
+      "clerkUserId": "clerk_st_003_test",
+      "email": "dmytro.tkachuk@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Дмитро",
+      "lastName": "Ткачук",
+      "middleName": "Віталійович",
+      "createdAt": "2026-03-12T14:15:00Z"
+    },
+    {
+      "id": "u6",
+      "clerkUserId": "clerk_st_004_test",
+      "email": "sofia.klymenko@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Софія",
+      "lastName": "Клименко",
+      "middleName": "Андріївна",
+      "createdAt": "2026-03-20T09:45:00Z"
+    },
+    {
+      "id": "u7",
+      "clerkUserId": "clerk_st_005_test",
+      "email": "artem.romanenko@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Артем",
+      "lastName": "Романенко",
+      "middleName": "Петрович",
+      "createdAt": "2026-04-02T12:00:00Z"
+    },
+    {
+      "id": "u8",
+      "clerkUserId": "clerk_st_006_test",
+      "email": "kateryna.marchenko@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Катерина",
+      "lastName": "Марченко",
+      "middleName": "Олегівна",
+      "createdAt": "2026-04-10T16:30:00Z"
+    },
+    {
+      "id": "u9",
+      "clerkUserId": "clerk_st_007_test",
+      "email": "vladyslav.petryk@student.example",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Владислав",
+      "lastName": "Петрик",
+      "middleName": "Миколайович",
+      "createdAt": "2026-04-18T10:10:00Z"
+    }
+  ],
+  "Company": [
+    {
+      "id": "c1",
+      "registrationType": "COMPANY",
+      "registrationNumber": "TEST-EDR-001-2026",
+      "legalName": "ТОВ ТехВіста Діджитал",
+      "publicName": "TechVista",
+      "foundationYear": 2018,
+      "employeeCount": "SIZE_51_100",
+      "about": "Вигадана українська IT-компанія, що розробляє вебплатформи, хмарні сервіси та цифрові продукти для міжнародних клієнтів. Команда підтримує розвиток молодих спеціалістів і пропонує студентам можливість отримати практичний досвід.",
+      "publicEmail": "hello@techvista.example",
+      "verificationStatus": "APPROVED",
+      "createdAt": "2026-01-05T10:00:00Z"
+    },
+    {
+      "id": "c2",
+      "registrationType": "FOP",
+      "registrationNumber": "TEST-FOP-002-2026",
+      "legalName": "ФОП Мельник Андрій Олександрович",
+      "publicName": "SoftBridge Lab",
+      "foundationYear": 2021,
+      "employeeCount": "SIZE_1_10",
+      "about": "Вигадана невелика команда розробників, яка спеціалізується на створенні програмних рішень, автоматизації бізнес-процесів і консалтингу у сфері інформаційних технологій.",
+      "publicEmail": "contact@softbridge.example",
+      "verificationStatus": "PENDING",
+      "createdAt": "2026-02-12T13:30:00Z"
+    }
+  ],
+  "HrProfile": [
+    {
+      "id": "hr1",
+      "userId": "u1",
+      "companyId": "c1",
+      "position": "Senior IT Recruiter"
+    },
+    {
+      "id": "hr2",
+      "userId": "u2",
+      "companyId": "c2",
+      "position": "HR Manager"
+    }
+  ],
+  "StudentProfile": [
+    {
+      "id": "sp1",
+      "userId": "u3",
+      "gender": "MALE",
+      "birthDate": "2003-05-14T00:00:00Z",
+      "contactEmail": "maksym.bondar@student.example",
+      "primaryPhone": "+380501110001",
+      "desiredPosition": "Frontend Developer",
+      "minSalary": 18000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "sp2",
+      "userId": "u4",
+      "gender": "FEMALE",
+      "birthDate": "2004-02-21T00:00:00Z",
+      "contactEmail": "anastasiia.shevchenko@student.example",
+      "primaryPhone": "+380501110002",
+      "desiredPosition": "UI/UX Designer",
+      "minSalary": 16000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "sp3",
+      "userId": "u5",
+      "gender": "MALE",
+      "birthDate": "2002-11-09T00:00:00Z",
+      "contactEmail": "dmytro.tkachuk@student.example",
+      "primaryPhone": "+380501110003",
+      "desiredPosition": "Backend Developer",
+      "minSalary": 22000,
+      "visibility": "APPLIED_ONLY"
+    },
+    {
+      "id": "sp4",
+      "userId": "u6",
+      "gender": "FEMALE",
+      "birthDate": "2003-08-17T00:00:00Z",
+      "contactEmail": "sofia.klymenko@student.example",
+      "primaryPhone": "+380501110004",
+      "desiredPosition": "QA Engineer",
+      "minSalary": 17000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "sp5",
+      "userId": "u7",
+      "gender": "MALE",
+      "birthDate": "2004-01-30T00:00:00Z",
+      "contactEmail": "artem.romanenko@student.example",
+      "primaryPhone": "+380501110005",
+      "desiredPosition": "Fullstack Developer",
+      "minSalary": 25000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "sp6",
+      "userId": "u8",
+      "gender": "FEMALE",
+      "birthDate": "2002-07-12T00:00:00Z",
+      "contactEmail": "kateryna.marchenko@student.example",
+      "primaryPhone": "+380501110006",
+      "desiredPosition": "Data Analyst",
+      "minSalary": 20000,
+      "visibility": "HIDDEN"
+    },
+    {
+      "id": "sp7",
+      "userId": "u9",
+      "gender": "MALE",
+      "birthDate": "2003-12-03T00:00:00Z",
+      "contactEmail": "vladyslav.petryk@student.example",
+      "primaryPhone": "+380501110007",
+      "desiredPosition": "Backend Developer",
+      "minSalary": 23000,
+      "visibility": "PUBLIC"
+    }
+  ],
+  "Vacancy": [
+    {
+      "id": "v1",
+      "hrProfileId": "hr1",
+      "companyId": "c1",
+      "title": "Junior Frontend Developer",
+      "description": "Шукаємо Junior Frontend Developer до команди розробки вебплатформ. Основні обов'язки: розробка інтерфейсів на React і TypeScript, інтеграція REST API, виправлення помилок та участь у командних code review. Вимоги: базові знання JavaScript, TypeScript, React, HTML і CSS, розуміння Git та бажання навчатися. Буде перевагою досвід роботи з PostgreSQL. Пропонуємо менторство, гнучкий графік, віддалену роботу та можливість професійного розвитку.",
+      "professionId": 1,
+      "minSalary": 20000,
+      "maxSalary": 30000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-20T09:00:00Z",
+      "publishedAt": "2026-10-21T09:00:00Z",
+      "closingDate": "2026-12-20T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v2",
+      "hrProfileId": "hr1",
+      "companyId": "c1",
+      "title": "Junior Backend Developer",
+      "description": "TechVista шукає Junior Backend Developer для роботи над серверною частиною корпоративних вебзастосунків. Обов'язки: розробка API на Node.js, робота з PostgreSQL, написання тестів, виправлення помилок і документування програмного коду. Вимоги: знання JavaScript або TypeScript, основ SQL, розуміння принципів REST API та Git. Пропонуємо оплачуване стажування, підтримку досвідчених розробників і перспективу працевлаштування.",
+      "professionId": 2,
+      "minSalary": 22000,
+      "maxSalary": 35000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "CLOSED",
+      "createdAt": "2026-07-01T08:30:00Z",
+      "publishedAt": "2026-07-03T09:00:00Z",
+      "closingDate": "2026-09-30T23:59:59Z",
+      "closedAt": "2026-09-15T15:30:00Z",
+      "closeReason": "HIRED"
+    },
+    {
+      "id": "v3",
+      "hrProfileId": "hr2",
+      "companyId": "c2",
+      "title": "Junior QA Automation Engineer",
+      "description": "SoftBridge Lab планує розширення команди та готує вакансію Junior QA Automation Engineer. Майбутні обов'язки: автоматизація тестування вебзастосунків, створення тестових сценаріїв, перевірка REST API та документування результатів тестування. Очікуємо базові знання JavaScript або Python, розуміння принципів тестування, уважність і аналітичне мислення. Наразі вакансія перебуває на етапі підготовки та очікує підтвердження компанії.",
+      "professionId": 5,
+      "minSalary": 18000,
+      "maxSalary": 28000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "DRAFT",
+      "createdAt": "2026-11-10T12:00:00Z",
+      "publishedAt": null,
+      "closingDate": "2027-02-28T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    }
+  ],
+  "VacancySkill": [
+    {
+      "vacancyId": "v1",
+      "skillId": 1,
+      "weight": "CRITICAL"
+    },
+    {
+      "vacancyId": "v1",
+      "skillId": 3,
+      "weight": "CRITICAL"
+    },
+    {
+      "vacancyId": "v1",
+      "skillId": 9,
+      "weight": "IMPORTANT"
+    },
+    {
+      "vacancyId": "v2",
+      "skillId": 2,
+      "weight": "CRITICAL"
+    },
+    {
+      "vacancyId": "v2",
+      "skillId": 17,
+      "weight": "CRITICAL"
+    },
+    {
+      "vacancyId": "v2",
+      "skillId": 37,
+      "weight": "IMPORTANT"
+    },
+    {
+      "vacancyId": "v3",
+      "skillId": 26,
+      "weight": "CRITICAL"
+    },
+    {
+      "vacancyId": "v3",
+      "skillId": 14,
+      "weight": "IMPORTANT"
+    },
+    {
+      "vacancyId": "v3",
+      "skillId": 40,
+      "weight": "IMPORTANT"
+    }
+  ],
+  "Application": [
+    {
+      "id": "a1",
+      "vacancyId": "v1",
+      "studentProfileId": "sp1",
+      "status": "VIEWED",
+      "coverLetter": "Вітаю! Я студент третього курсу спеціальності комп'ютерні науки. Маю практичний досвід роботи з JavaScript, TypeScript та React. Прагну розвиватися у frontend-розробці та буду радий долучитися до вашої команди.",
+      "createdAt": "2026-10-25T10:00:00Z"
+    },
+    {
+      "id": "a2",
+      "vacancyId": "v1",
+      "studentProfileId": "sp2",
+      "status": "SHORTLISTED",
+      "coverLetter": "Доброго дня! Маю досвід створення вебінтерфейсів у навчальних проєктах, добре знайома з основами React та TypeScript. Зацікавлена у можливості професійного розвитку та роботі над реальними продуктами.",
+      "createdAt": "2026-10-26T11:30:00Z"
+    },
+    {
+      "id": "a3",
+      "vacancyId": "v1",
+      "studentProfileId": "sp3",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Вітаю! Мене цікавить позиція Junior Frontend Developer. Працював із JavaScript, React і REST API у власних проєктах. Вмію працювати з Git та швидко освоюю нові технології.",
+      "createdAt": "2026-10-27T14:20:00Z"
+    },
+    {
+      "id": "a4",
+      "vacancyId": "v1",
+      "studentProfileId": "sp4",
+      "status": "OFFERED",
+      "coverLetter": "Доброго дня! Хочу приєднатися до вашої команди та розвиватися у веброзробці. Маю навчальний досвід роботи з TypeScript, React і Git. Відповідально ставлюся до завдань і люблю працювати в команді.",
+      "createdAt": "2026-10-28T09:15:00Z"
+    },
+    {
+      "id": "a5",
+      "vacancyId": "v1",
+      "studentProfileId": "sp5",
+      "status": "REJECTED",
+      "coverLetter": "Вітаю! Я студент спеціальності програмна інженерія. Маю досвід розробки невеликих застосунків на JavaScript і React. Буду вдячний за можливість пройти відбір.",
+      "createdAt": "2026-10-29T13:00:00Z"
+    },
+    {
+      "id": "a6",
+      "vacancyId": "v1",
+      "studentProfileId": "sp6",
+      "status": "WITHDRAWN",
+      "coverLetter": "Доброго дня! Зацікавлена у вакансії, оскільки хочу отримати практичний досвід роботи з React та TypeScript. Маю досвід командної роботи над університетськими проєктами.",
+      "createdAt": "2026-10-30T15:45:00Z"
+    },
+    {
+      "id": "a7",
+      "vacancyId": "v2",
+      "studentProfileId": "sp7",
+      "status": "HIRED",
+      "coverLetter": "Вітаю! Маю практичний досвід роботи з Node.js, PostgreSQL та REST API. Розробляв навчальні серверні застосунки, знайомий із Git і принципами тестування. Дуже зацікавлений у можливості працювати у вашій команді.",
+      "createdAt": "2026-07-10T09:30:00Z"
+    },
+    {
+      "id": "a8",
+      "vacancyId": "v2",
+      "studentProfileId": "sp1",
+      "status": "VIEWED",
+      "coverLetter": "Доброго дня! Хочу розвиватися у backend-розробці. Маю базові знання Node.js, SQL і JavaScript, а також досвід роботи над університетськими проєктами.",
+      "createdAt": "2026-07-12T12:00:00Z"
+    },
+    {
+      "id": "a9",
+      "vacancyId": "v2",
+      "studentProfileId": "sp3",
+      "status": "SHORTLISTED",
+      "coverLetter": "Вітаю! Цікавлюся серверною розробкою та маю досвід роботи з Node.js, PostgreSQL і REST API. Готовий навчатися та брати участь у розробці реальних програмних продуктів.",
+      "createdAt": "2026-07-15T10:15:00Z"
+    },
+    {
+      "id": "a10",
+      "vacancyId": "v2",
+      "studentProfileId": "sp5",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Доброго дня! Маю досвід роботи з JavaScript, Node.js та базами даних у межах навчальних проєктів. Хочу поглибити свої знання backend-розробки та отримати досвід у професійній команді.",
+      "createdAt": "2026-07-18T16:00:00Z"
+    }
+  ],
+  "ApplicationStatusHistory": [
+    {
+      "id": "h1",
+      "applicationId": "a1",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-25T10:00:00Z"
+    },
+    {
+      "id": "h2",
+      "applicationId": "a1",
+      "fromStatus": "SENT",
+      "toStatus": "VIEWED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-10-26T08:30:00Z"
+    },
+    {
+      "id": "h3",
+      "applicationId": "a2",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-26T11:30:00Z"
+    },
+    {
+      "id": "h4",
+      "applicationId": "a2",
+      "fromStatus": "SENT",
+      "toStatus": "SHORTLISTED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "h5",
+      "applicationId": "a3",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-27T14:20:00Z"
+    },
+    {
+      "id": "h6",
+      "applicationId": "a3",
+      "fromStatus": "SENT",
+      "toStatus": "INTERVIEW_INVITED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-10-30T10:00:00Z"
+    },
+    {
+      "id": "h7",
+      "applicationId": "a4",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-28T09:15:00Z"
+    },
+    {
+      "id": "h8",
+      "applicationId": "a4",
+      "fromStatus": "SENT",
+      "toStatus": "OFFERED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-11-03T14:00:00Z"
+    },
+    {
+      "id": "h9",
+      "applicationId": "a5",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-29T13:00:00Z"
+    },
+    {
+      "id": "h10",
+      "applicationId": "a5",
+      "fromStatus": "SENT",
+      "toStatus": "REJECTED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-11-02T11:00:00Z"
+    },
+    {
+      "id": "h11",
+      "applicationId": "a6",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-10-30T15:45:00Z"
+    },
+    {
+      "id": "h12",
+      "applicationId": "a6",
+      "fromStatus": "SENT",
+      "toStatus": "VIEWED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-11-01T09:00:00Z"
+    },
+    {
+      "id": "h13",
+      "applicationId": "a6",
+      "fromStatus": "VIEWED",
+      "toStatus": "WITHDRAWN",
+      "changedByUserId": "u8",
+      "createdAt": "2026-11-02T16:30:00Z"
+    },
+    {
+      "id": "h14",
+      "applicationId": "a7",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-07-10T09:30:00Z"
+    },
+    {
+      "id": "h15",
+      "applicationId": "a7",
+      "fromStatus": "SENT",
+      "toStatus": "HIRED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-09-15T15:00:00Z"
+    },
+    {
+      "id": "h16",
+      "applicationId": "a8",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-07-12T12:00:00Z"
+    },
+    {
+      "id": "h17",
+      "applicationId": "a8",
+      "fromStatus": "SENT",
+      "toStatus": "VIEWED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-07-14T10:00:00Z"
+    },
+    {
+      "id": "h18",
+      "applicationId": "a9",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-07-15T10:15:00Z"
+    },
+    {
+      "id": "h19",
+      "applicationId": "a9",
+      "fromStatus": "SENT",
+      "toStatus": "SHORTLISTED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-07-20T13:00:00Z"
+    },
+    {
+      "id": "h20",
+      "applicationId": "a10",
+      "fromStatus": null,
+      "toStatus": "SENT",
+      "changedByUserId": null,
+      "createdAt": "2026-07-18T16:00:00Z"
+    },
+    {
+      "id": "h21",
+      "applicationId": "a10",
+      "fromStatus": "SENT",
+      "toStatus": "INTERVIEW_INVITED",
+      "changedByUserId": "u1",
+      "createdAt": "2026-07-25T09:30:00Z"
+    }
+  ]
+}
