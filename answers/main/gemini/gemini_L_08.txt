@@ -1,0 +1,1550 @@
+{
+  "User": [
+    {
+      "id": "u_hr_1",
+      "clerkUserId": "user_clerk_hr_1",
+      "email": "hr1@techcorp.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Олена",
+      "lastName": "Коваленко",
+      "middleName": "Петрівна",
+      "createdAt": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": "u_hr_2",
+      "clerkUserId": "user_clerk_hr_2",
+      "email": "hr2@softsolutions.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Андрій",
+      "lastName": "Мельник",
+      "middleName": "Іванович",
+      "createdAt": "2026-01-12T11:00:00Z"
+    },
+    {
+      "id": "u_hr_3",
+      "clerkUserId": "user_clerk_hr_3",
+      "email": "hr3@innovatelab.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Ірина",
+      "lastName": "Шевченко",
+      "middleName": "Василівна",
+      "createdAt": "2026-01-15T09:30:00Z"
+    },
+    {
+      "id": "u_hr_4",
+      "clerkUserId": "user_clerk_hr_4",
+      "email": "hr4@devstudio.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Максим",
+      "lastName": "Бойко",
+      "middleName": "Олегович",
+      "createdAt": "2026-01-20T14:20:00Z"
+    },
+    {
+      "id": "u_hr_5",
+      "clerkUserId": "user_clerk_hr_5",
+      "email": "hr5@startuphub.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Катерина",
+      "lastName": "Бондаренко",
+      "middleName": "Миколаївна",
+      "createdAt": "2026-02-01T10:00:00Z"
+    },
+    {
+      "id": "u_hr_6",
+      "clerkUserId": "user_clerk_hr_6",
+      "email": "hr6@nextgen.ua",
+      "role": "HR",
+      "status": "ACTIVE",
+      "firstName": "Дмитро",
+      "lastName": "Ткаченко",
+      "middleName": "Вікторович",
+      "createdAt": "2026-02-05T16:00:00Z"
+    },
+    {
+      "id": "u_st_1",
+      "clerkUserId": "user_clerk_st_1",
+      "email": "student1@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Олександр",
+      "lastName": "Павленко",
+      "middleName": "Сергійович",
+      "createdAt": "2026-03-01T09:00:00Z"
+    },
+    {
+      "id": "u_st_2",
+      "clerkUserId": "user_clerk_st_2",
+      "email": "student2@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Софія",
+      "lastName": "Кравченко",
+      "middleName": "Андріївна",
+      "createdAt": "2026-03-02T10:15:00Z"
+    },
+    {
+      "id": "u_st_3",
+      "clerkUserId": "user_clerk_st_3",
+      "email": "student3@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Артем",
+      "lastName": "Олійник",
+      "middleName": "Олександрович",
+      "createdAt": "2026-03-03T11:20:00Z"
+    },
+    {
+      "id": "u_st_4",
+      "clerkUserId": "user_clerk_st_4",
+      "email": "student4@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Вікторія",
+      "lastName": "Марченко",
+      "middleName": "Петрівна",
+      "createdAt": "2026-03-04T12:00:00Z"
+    },
+    {
+      "id": "u_st_5",
+      "clerkUserId": "user_clerk_st_5",
+      "email": "student5@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Михайло",
+      "lastName": "Романюк",
+      "middleName": "Ігорович",
+      "createdAt": "2026-03-05T09:45:00Z"
+    },
+    {
+      "id": "u_st_6",
+      "clerkUserId": "user_clerk_st_6",
+      "email": "student6@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Анастасія",
+      "lastName": "Лисенко",
+      "middleName": "Володимирівна",
+      "createdAt": "2026-03-06T13:10:00Z"
+    },
+    {
+      "id": "u_st_7",
+      "clerkUserId": "user_clerk_st_7",
+      "email": "student7@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Владислав",
+      "lastName": "Коваль",
+      "middleName": "Юрійович",
+      "createdAt": "2026-03-07T14:30:00Z"
+    },
+    {
+      "id": "u_st_8",
+      "clerkUserId": "user_clerk_st_8",
+      "email": "student8@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Юлія",
+      "lastName": "Мороз",
+      "middleName": "Михайлівна",
+      "createdAt": "2026-03-08T15:00:00Z"
+    },
+    {
+      "id": "u_st_9",
+      "clerkUserId": "user_clerk_st_9",
+      "email": "student9@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Денис",
+      "lastName": "Власенко",
+      "middleName": "Олегович",
+      "createdAt": "2026-03-09T10:20:00Z"
+    },
+    {
+      "id": "u_st_10",
+      "clerkUserId": "user_clerk_st_10",
+      "email": "student10@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Тетяна",
+      "lastName": "Гончарук",
+      "middleName": "Анатоліївна",
+      "createdAt": "2026-03-10T11:00:00Z"
+    },
+    {
+      "id": "u_st_11",
+      "clerkUserId": "user_clerk_st_11",
+      "email": "student11@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Євген",
+      "lastName": "Савченко",
+      "middleName": "Вікторович",
+      "createdAt": "2026-03-11T09:15:00Z"
+    },
+    {
+      "id": "u_st_12",
+      "clerkUserId": "user_clerk_st_12",
+      "email": "student12@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Дарина",
+      "lastName": "Пасічник",
+      "middleName": "Олександрівна",
+      "createdAt": "2026-03-12T10:30:00Z"
+    },
+    {
+      "id": "u_st_13",
+      "clerkUserId": "user_clerk_st_13",
+      "email": "student13@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Іван",
+      "lastName": "Кузьменко",
+      "middleName": "Петрович",
+      "createdAt": "2026-03-13T12:45:00Z"
+    },
+    {
+      "id": "u_st_14",
+      "clerkUserId": "user_clerk_st_14",
+      "email": "student14@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Карина",
+      "lastName": "Поліщук",
+      "middleName": "Василівна",
+      "createdAt": "2026-03-14T14:00:00Z"
+    },
+    {
+      "id": "u_st_15",
+      "clerkUserId": "user_clerk_st_15",
+      "email": "student15@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Максим",
+      "lastName": "Костюк",
+      "middleName": "Іванович",
+      "createdAt": "2026-03-15T15:20:00Z"
+    },
+    {
+      "id": "u_st_16",
+      "clerkUserId": "user_clerk_st_16",
+      "email": "student16@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Анна",
+      "lastName": "Назаренко",
+      "middleName": "Сергіївна",
+      "createdAt": "2026-03-16T09:10:00Z"
+    },
+    {
+      "id": "u_st_17",
+      "clerkUserId": "user_clerk_st_17",
+      "email": "student17@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Павло",
+      "lastName": "Дмитренко",
+      "middleName": "Михайлович",
+      "createdAt": "2026-03-17T10:25:00Z"
+    },
+    {
+      "id": "u_st_18",
+      "clerkUserId": "user_clerk_st_18",
+      "email": "student18@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Ольга",
+      "lastName": "Руденко",
+      "middleName": "Анатоліївна",
+      "createdAt": "2026-03-18T11:40:00Z"
+    },
+    {
+      "id": "u_st_19",
+      "clerkUserId": "user_clerk_st_19",
+      "email": "student19@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Богдан",
+      "lastName": "Мельничук",
+      "middleName": "Олегович",
+      "createdAt": "2026-03-19T13:00:00Z"
+    },
+    {
+      "id": "u_st_20",
+      "clerkUserId": "user_clerk_st_20",
+      "email": "student20@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Кристина",
+      "lastName": "Шеремет",
+      "middleName": "Володимирівна",
+      "createdAt": "2026-03-20T14:15:00Z"
+    },
+    {
+      "id": "u_st_21",
+      "clerkUserId": "user_clerk_st_21",
+      "email": "student21@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Роман",
+      "lastName": "Гнатюк",
+      "middleName": "Юрійович",
+      "createdAt": "2026-03-21T09:30:00Z"
+    },
+    {
+      "id": "u_st_22",
+      "clerkUserId": "user_clerk_st_22",
+      "email": "student22@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Яна",
+      "lastName": "Дчук",
+      "middleName": "Михайлівна",
+      "createdAt": "2026-03-22T10:45:00Z"
+    },
+    {
+      "id": "u_st_23",
+      "clerkUserId": "user_clerk_st_23",
+      "email": "student23@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Віталій",
+      "lastName": "Савчук",
+      "middleName": "Ігорович",
+      "createdAt": "2026-03-23T11:50:00Z"
+    },
+    {
+      "id": "u_st_24",
+      "clerkUserId": "user_clerk_st_24",
+      "email": "student24@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Наталія",
+      "lastName": "Бондар",
+      "middleName": "Петрівна",
+      "createdAt": "2026-03-24T12:30:00Z"
+    },
+    {
+      "id": "u_st_25",
+      "clerkUserId": "user_clerk_st_25",
+      "email": "student25@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Сергій",
+      "lastName": "Ткачук",
+      "middleName": "Васильович",
+      "createdAt": "2026-03-25T13:40:00Z"
+    },
+    {
+      "id": "u_st_26",
+      "clerkUserId": "user_clerk_st_26",
+      "email": "student26@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Марина",
+      "lastName": "Ковальчук",
+      "middleName": "Олександрівна",
+      "createdAt": "2026-03-26T14:50:00Z"
+    },
+    {
+      "id": "u_st_27",
+      "clerkUserId": "user_clerk_st_27",
+      "email": "student27@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Андрій",
+      "lastName": "Павлюк",
+      "middleName": "Сергійович",
+      "createdAt": "2026-03-27T09:20:00Z"
+    },
+    {
+      "id": "u_st_28",
+      "clerkUserId": "user_clerk_st_28",
+      "email": "student28@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Світлана",
+      "lastName": "Мельник",
+      "middleName": "Іванівна",
+      "createdAt": "2026-03-28T10:35:00Z"
+    },
+    {
+      "id": "u_st_29",
+      "clerkUserId": "user_clerk_st_29",
+      "email": "student29@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Ігор",
+      "lastName": "Шевчук",
+      "middleName": "Володимирович",
+      "createdAt": "2026-03-29T11:45:00Z"
+    },
+    {
+      "id": "u_st_30",
+      "clerkUserId": "user_clerk_st_30",
+      "email": "student30@stud.ua",
+      "role": "STUDENT",
+      "status": "ACTIVE",
+      "firstName": "Аліна",
+      "lastName": "Бойчук",
+      "middleName": "Петрівна",
+      "createdAt": "2026-03-30T12:55:00Z"
+    }
+  ],
+  "Company": [
+    {
+      "id": "c_1",
+      "registrationType": "COMPANY",
+      "registrationNumber": "12345678",
+      "legalName": "Товариство з обмеженою відповідальністю 'Техно Корп'",
+      "publicName": "TechCorp",
+      "foundationYear": 2018,
+      "employeeCount": "SIZE_51_100",
+      "about": "Провідна IT-компанія, що спеціалізується на розробці хмарних сервісів.",
+      "publicEmail": "contact@techcorp.ua",
+      "verificationStatus": "APPROVED",
+      "createdAt": "2026-01-10T09:00:00Z"
+    },
+    {
+      "id": "c_2",
+      "registrationType": "COMPANY",
+      "registrationNumber": "87654321",
+      "legalName": "Товариство з обмеженою відповідальністю 'Софт Солюшнз'",
+      "publicName": "SoftSolutions",
+      "foundationYear": 2020,
+      "employeeCount": "SIZE_21_50",
+      "about": "Розробка корпоративного програмного забезпечення та мобільних додатків.",
+      "publicEmail": "info@softsolutions.ua",
+      "verificationStatus": "APPROVED",
+      "createdAt": "2026-01-12T10:00:00Z"
+    },
+    {
+      "id": "c_3",
+      "registrationType": "COMPANY",
+      "registrationNumber": "11223344",
+      "legalName": "Товариство з обмеженою відповідальністю 'Інновейт Лаб'",
+      "publicName": "InnovateLab",
+      "foundationYear": 2021,
+      "employeeCount": "SIZE_11_20",
+      "about": "Інноваційні рішення на базі штучного інтелекту та машинного навчання.",
+      "publicEmail": "hello@innovatelab.ua",
+      "verificationStatus": "APPROVED",
+      "createdAt": "2026-01-15T08:00:00Z"
+    },
+    {
+      "id": "c_4",
+      "registrationType": "FOP",
+      "registrationNumber": "22334455",
+      "legalName": "ФОП Бойко Максим Олегович",
+      "publicName": "DevStudio",
+      "foundationYear": 2022,
+      "employeeCount": "SIZE_1_10",
+      "about": "Студія веб-розробки та UI/UX дизайну.",
+      "publicEmail": "support@devstudio.ua",
+      "verificationStatus": "APPROVED",
+      "createdAt": "2026-01-20T13:00:00Z"
+    },
+    {
+      "id": "c_5",
+      "registrationType": "COMPANY",
+      "registrationNumber": "33445566",
+      "legalName": "Товариство з обмеженою відповідальністю 'Стартап Хаб'",
+      "publicName": "StartupHub",
+      "foundationYear": 2025,
+      "employeeCount": "SIZE_1_10",
+      "about": "Новий інкубатор для студентських проєктів.",
+      "publicEmail": "hr@startuphub.ua",
+      "verificationStatus": "PENDING",
+      "createdAt": "2026-02-01T09:00:00Z"
+    },
+    {
+      "id": "c_6",
+      "registrationType": "FOP",
+      "registrationNumber": "44556677",
+      "legalName": "ФОП Ткаченко Дмитро Вікторович",
+      "publicName": "NextGen",
+      "foundationYear": 2025,
+      "employeeCount": "SIZE_1_10",
+      "about": "Консалтинг та аудит програмного забезпечення.",
+      "publicEmail": "contact@nextgen.ua",
+      "verificationStatus": "PENDING",
+      "createdAt": "2026-02-05T15:00:00Z"
+    }
+  ],
+  "HrProfile": [
+    {
+      "id": "hr_prof_1",
+      "userId": "u_hr_1",
+      "companyId": "c_1",
+      "position": "IT Recruiter"
+    },
+    {
+      "id": "hr_prof_2",
+      "userId": "u_hr_2",
+      "companyId": "c_2",
+      "position": "HR Manager"
+    },
+    {
+      "id": "hr_prof_3",
+      "userId": "u_hr_3",
+      "companyId": "c_3",
+      "position": "Talent Acquisition Specialist"
+    },
+    {
+      "id": "hr_prof_4",
+      "userId": "u_hr_4",
+      "companyId": "c_4",
+      "position": "Head of Recruitment"
+    },
+    {
+      "id": "hr_prof_5",
+      "userId": "u_hr_5",
+      "companyId": "c_5",
+      "position": "HR Generalist"
+    },
+    {
+      "id": "hr_prof_6",
+      "userId": "u_hr_6",
+      "companyId": "c_6",
+      "position": "Recruiter"
+    }
+  ],
+  "StudentProfile": [
+    {
+      "id": "st_prof_1",
+      "userId": "u_st_1",
+      "gender": "MALE",
+      "birthDate": "2004-05-12T00:00:00Z",
+      "contactEmail": "student1@stud.ua",
+      "primaryPhone": "+380501112233",
+      "desiredPosition": "Frontend-розробник",
+      "minSalary": 15000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_2",
+      "userId": "u_st_2",
+      "gender": "FEMALE",
+      "birthDate": "2005-03-20T00:00:00Z",
+      "contactEmail": "student2@stud.ua",
+      "primaryPhone": "+380501112234",
+      "desiredPosition": "Backend-розробник",
+      "minSalary": 18000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_3",
+      "userId": "u_st_3",
+      "gender": "MALE",
+      "birthDate": "2004-07-15T00:00:00Z",
+      "contactEmail": "student3@stud.ua",
+      "primaryPhone": "+380501112235",
+      "desiredPosition": "Fullstack-розробник",
+      "minSalary": 20000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_4",
+      "userId": "u_st_4",
+      "gender": "FEMALE",
+      "birthDate": "2005-01-10T00:00:00Z",
+      "contactEmail": "student4@stud.ua",
+      "primaryPhone": "+380501112236",
+      "desiredPosition": "UI/UX-дизайнер",
+      "minSalary": 14000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_5",
+      "userId": "u_st_5",
+      "gender": "MALE",
+      "birthDate": "2004-11-22T00:00:00Z",
+      "contactEmail": "student5@stud.ua",
+      "primaryPhone": "+380501112237",
+      "desiredPosition": "DevOps-інженер",
+      "minSalary": 22000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_6",
+      "userId": "u_st_6",
+      "gender": "FEMALE",
+      "birthDate": "2005-06-05T00:00:00Z",
+      "contactEmail": "student6@stud.ua",
+      "primaryPhone": "+380501112238",
+      "desiredPosition": "Data-аналітик",
+      "minSalary": 16000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_7",
+      "userId": "u_st_7",
+      "gender": "MALE",
+      "birthDate": "2004-09-18T00:00:00Z",
+      "contactEmail": "student7@stud.ua",
+      "primaryPhone": "+380501112239",
+      "desiredPosition": "Інженер з ручного тестування",
+      "minSalary": 12000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_8",
+      "userId": "u_st_8",
+      "gender": "FEMALE",
+      "birthDate": "2005-02-14T00:00:00Z",
+      "contactEmail": "student8@stud.ua",
+      "primaryPhone": "+380501112240",
+      "desiredPosition": "Бізнес-аналітик",
+      "minSalary": 15000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_9",
+      "userId": "u_st_9",
+      "gender": "MALE",
+      "birthDate": "2004-04-30T00:00:00Z",
+      "contactEmail": "student9@stud.ua",
+      "primaryPhone": "+380501112241",
+      "desiredPosition": "Мобільний розробник",
+      "minSalary": 19000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_10",
+      "userId": "u_st_10",
+      "gender": "FEMALE",
+      "birthDate": "2005-08-25T00:00:00Z",
+      "contactEmail": "student10@stud.ua",
+      "primaryPhone": "+380501112242",
+      "desiredPosition": "Інженер з автоматизації тестування",
+      "minSalary": 17000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_11",
+      "userId": "u_st_11",
+      "gender": "MALE",
+      "birthDate": "2004-12-01T00:00:00Z",
+      "contactEmail": "student11@stud.ua",
+      "primaryPhone": "+380501112243",
+      "desiredPosition": "Frontend-розробник",
+      "minSalary": 14000,
+      "visibility": "APPLIED_ONLY"
+    },
+    {
+      "id": "st_prof_12",
+      "userId": "u_st_12",
+      "gender": "FEMALE",
+      "birthDate": "2005-10-10T00:00:00Z",
+      "contactEmail": "student12@stud.ua",
+      "primaryPhone": "+380501112244",
+      "desiredPosition": "Backend-розробник",
+      "minSalary": 16000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_13",
+      "userId": "u_st_13",
+      "gender": "MALE",
+      "birthDate": "2004-03-03T00:00:00Z",
+      "contactEmail": "student13@stud.ua",
+      "primaryPhone": "+380501112245",
+      "desiredPosition": "Fullstack-розробник",
+      "minSalary": 21000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_14",
+      "userId": "u_st_14",
+      "gender": "FEMALE",
+      "birthDate": "2005-05-19T00:00:00Z",
+      "contactEmail": "student14@stud.ua",
+      "primaryPhone": "+380501112246",
+      "desiredPosition": "UI/UX-дизайнер",
+      "minSalary": 13000,
+      "visibility": "HIDDEN"
+    },
+    {
+      "id": "st_prof_15",
+      "userId": "u_st_15",
+      "gender": "MALE",
+      "birthDate": "2004-08-22T00:00:00Z",
+      "contactEmail": "student15@stud.ua",
+      "primaryPhone": "+380501112247",
+      "desiredPosition": "DevOps-інженер",
+      "minSalary": 25000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_16",
+      "userId": "u_st_16",
+      "gender": "FEMALE",
+      "birthDate": "2005-09-09T00:00:00Z",
+      "contactEmail": "student16@stud.ua",
+      "primaryPhone": "+380501112248",
+      "desiredPosition": "Data-аналітик",
+      "minSalary": 15000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_17",
+      "userId": "u_st_17",
+      "gender": "MALE",
+      "birthDate": "2004-01-25T00:00:00Z",
+      "contactEmail": "student17@stud.ua",
+      "primaryPhone": "+380501112249",
+      "desiredPosition": "Інженер з ручного тестування",
+      "minSalary": 11000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_18",
+      "userId": "u_st_18",
+      "gender": "FEMALE",
+      "birthDate": "2005-04-14T00:00:00Z",
+      "contactEmail": "student18@stud.ua",
+      "primaryPhone": "+380501112250",
+      "desiredPosition": "Бізнес-аналітик",
+      "minSalary": 14000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_19",
+      "userId": "u_st_19",
+      "gender": "MALE",
+      "birthDate": "2004-06-29T00:00:00Z",
+      "contactEmail": "student19@stud.ua",
+      "primaryPhone": "+380501112251",
+      "desiredPosition": "Мобільний розробник",
+      "minSalary": 18000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_20",
+      "userId": "u_st_20",
+      "gender": "FEMALE",
+      "birthDate": "2005-11-30T00:00:00Z",
+      "contactEmail": "student20@stud.ua",
+      "primaryPhone": "+380501112252",
+      "desiredPosition": "Інженер з автоматизації тестування",
+      "minSalary": 16000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_21",
+      "userId": "u_st_21",
+      "gender": "MALE",
+      "birthDate": "2004-07-07T00:00:00Z",
+      "contactEmail": "student21@stud.ua",
+      "primaryPhone": "+380501112253",
+      "desiredPosition": "Frontend-розробник",
+      "minSalary": null,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_22",
+      "userId": "u_st_22",
+      "gender": "FEMALE",
+      "birthDate": "2005-02-18T00:00:00Z",
+      "contactEmail": "student22@stud.ua",
+      "primaryPhone": "+380501112254",
+      "desiredPosition": null,
+      "minSalary": null,
+      "visibility": "APPLIED_ONLY"
+    },
+    {
+      "id": "st_prof_23",
+      "userId": "u_st_23",
+      "gender": "MALE",
+      "birthDate": "2004-10-05T00:00:00Z",
+      "contactEmail": "student23@stud.ua",
+      "primaryPhone": "+380501112255",
+      "desiredPosition": "Backend-розробник",
+      "minSalary": 17000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_24",
+      "userId": "u_st_24",
+      "gender": "FEMALE",
+      "birthDate": "2005-03-22T00:00:00Z",
+      "contactEmail": "student24@stud.ua",
+      "primaryPhone": "+380501112256",
+      "desiredPosition": "UI/UX-дизайнер",
+      "minSalary": 15000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_25",
+      "userId": "u_st_25",
+      "gender": "MALE",
+      "birthDate": "2004-12-19T00:00:00Z",
+      "contactEmail": "student25@stud.ua",
+      "primaryPhone": "+380501112257",
+      "desiredPosition": "Fullstack-розробник",
+      "minSalary": 22000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_26",
+      "userId": "u_st_26",
+      "gender": "FEMALE",
+      "birthDate": "2005-01-08T00:00:00Z",
+      "contactEmail": "student26@stud.ua",
+      "primaryPhone": "+380501112258",
+      "desiredPosition": "Data-аналітик",
+      "minSalary": 16000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_27",
+      "userId": "u_st_27",
+      "gender": "MALE",
+      "birthDate": "2004-05-25T00:00:00Z",
+      "contactEmail": "student27@stud.ua",
+      "primaryPhone": "+380501112259",
+      "desiredPosition": "DevOps-інженер",
+      "minSalary": 20000,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_28",
+      "userId": "u_st_28",
+      "gender": "FEMALE",
+      "birthDate": "2005-06-11T00:00:00Z",
+      "contactEmail": "student28@stud.ua",
+      "primaryPhone": "+380501112260",
+      "desiredPosition": "Інженер з ручного тестування",
+      "minSalary": 12500,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_29",
+      "userId": "u_st_29",
+      "gender": "MALE",
+      "birthDate": "2004-09-02T00:00:00Z",
+      "contactEmail": "student29@stud.ua",
+      "primaryPhone": "+380501112261",
+      "desiredPosition": "Бізнес-аналітик",
+      "minSalary": 15500,
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "st_prof_30",
+      "userId": "u_st_30",
+      "gender": "FEMALE",
+      "birthDate": "2005-12-15T00:00:00Z",
+      "contactEmail": "student30@stud.ua",
+      "primaryPhone": "+380501112262",
+      "desiredPosition": "Мобільний розробник",
+      "minSalary": 19000,
+      "visibility": "PUBLIC"
+    }
+  ],
+  "Vacancy": [
+    {
+      "id": "v_1",
+      "hrProfileId": "hr_prof_1",
+      "companyId": "c_1",
+      "title": "Junior Frontend Developer (React)",
+      "description": "Шукаємо талановитого студента на позицію Junior Frontend Developer. Робота з React, TypeScript.",
+      "professionId": 1,
+      "minSalary": 15000,
+      "maxSalary": 25000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-01T10:00:00Z",
+      "publishedAt": "2026-10-02T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_2",
+      "hrProfileId": "hr_prof_2",
+      "companyId": "c_2",
+      "title": "Junior Backend Developer (Node.js)",
+      "description": "Запрошуємо розробника Node.js для роботи над серверну частиною веб-додатків.",
+      "professionId": 2,
+      "minSalary": 18000,
+      "maxSalary": 30000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-05T10:00:00Z",
+      "publishedAt": "2026-10-06T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_3",
+      "hrProfileId": "hr_prof_3",
+      "companyId": "c_3",
+      "title": "Junior Fullstack Developer",
+      "description": "Робота з повним стеком технологій: React, Node.js, PostgreSQL.",
+      "professionId": 3,
+      "minSalary": 20000,
+      "maxSalary": 35000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-10T10:00:00Z",
+      "publishedAt": "2026-10-11T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_4",
+      "hrProfileId": "hr_prof_4",
+      "companyId": "c_4",
+      "title": "Junior UI/UX Designer",
+      "description": "Створення інтерфейсів для сучасних веб та мобільних додатків.",
+      "professionId": 10,
+      "minSalary": 14000,
+      "maxSalary": 22000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-12T10:00:00Z",
+      "publishedAt": "2026-10-13T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_5",
+      "hrProfileId": "hr_prof_1",
+      "companyId": "c_1",
+      "title": "Junior QA Manual Engineer",
+      "description": "Тестування веб-додатків, робота з Jira, Postman.",
+      "professionId": 6,
+      "minSalary": 12000,
+      "maxSalary": 18000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "CLOSED",
+      "createdAt": "2026-09-01T10:00:00Z",
+      "publishedAt": "2026-09-02T10:00:00Z",
+      "closingDate": "2026-11-01T23:59:59Z",
+      "closedAt": "2026-10-25T15:00:00Z",
+      "closeReason": "HIRED"
+    },
+    {
+      "id": "v_6",
+      "hrProfileId": "hr_prof_2",
+      "companyId": "c_2",
+      "title": "Junior Data Analyst",
+      "description": "Аналіз даних, робота з SQL та Python.",
+      "professionId": 9,
+      "minSalary": 16000,
+      "maxSalary": 24000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "CLOSED",
+      "createdAt": "2026-09-05T10:00:00Z",
+      "publishedAt": "2026-09-06T10:00:00Z",
+      "closingDate": "2026-11-01T23:59:59Z",
+      "closedAt": "2026-10-28T16:00:00Z",
+      "closeReason": "HIRED"
+    },
+    {
+      "id": "v_7",
+      "hrProfileId": "hr_prof_3",
+      "companyId": "c_3",
+      "title": "Junior DevOps Engineer",
+      "description": "Адміністрування хмарних сервісів, Docker, CI/CD.",
+      "professionId": 7,
+      "minSalary": 22000,
+      "maxSalary": 35000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-15T10:00:00Z",
+      "publishedAt": "2026-10-16T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_8",
+      "hrProfileId": "hr_prof_4",
+      "companyId": "c_4",
+      "title": "Junior Business Analyst",
+      "description": "Збір вимог, створення специфікацій, робота з Jira.",
+      "professionId": 13,
+      "minSalary": 15000,
+      "maxSalary": 23000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-18T10:00:00Z",
+      "publishedAt": "2026-10-19T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_9",
+      "hrProfileId": "hr_prof_5",
+      "companyId": "c_5",
+      "title": "Junior Mobile Developer (Flutter)",
+      "description": "Розробка кросплатформних мобільних додатків.",
+      "professionId": 4,
+      "minSalary": 17000,
+      "maxSalary": 28000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "DRAFT",
+      "createdAt": "2026-11-10T10:00:00Z",
+      "publishedAt": null,
+      "closingDate": "2027-01-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_10",
+      "hrProfileId": "hr_prof_6",
+      "companyId": "c_6",
+      "title": "Junior QA Automation Engineer",
+      "description": "Автоматизація тестування на Python.",
+      "professionId": 5,
+      "minSalary": 18000,
+      "maxSalary": 26000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "DRAFT",
+      "createdAt": "2026-11-11T10:00:00Z",
+      "publishedAt": null,
+      "closingDate": "2027-01-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_11",
+      "hrProfileId": "hr_prof_1",
+      "companyId": "c_1",
+      "title": "Junior Python Developer",
+      "description": "Розробка бекенду на Python та Django/FastAPI.",
+      "professionId": 2,
+      "minSalary": 19000,
+      "maxSalary": 29000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-20T10:00:00Z",
+      "publishedAt": "2026-10-21T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    },
+    {
+      "id": "v_12",
+      "hrProfileId": "hr_prof_2",
+      "companyId": "c_2",
+      "title": "Junior React Developer",
+      "description": "Розробка SPA на React та Redux Toolkit.",
+      "professionId": 1,
+      "minSalary": 16000,
+      "maxSalary": 24000,
+      "salaryPeriod": "PER_MONTH",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-22T10:00:00Z",
+      "publishedAt": "2026-10-23T10:00:00Z",
+      "closingDate": "2026-12-31T23:59:59Z",
+      "closedAt": null,
+      "closeReason": null
+    }
+  ],
+  "VacancySkill": [
+    { "vacancyId": "v_1", "skillId": 1, "weight": "CRITICAL" },
+    { "vacancyId": "v_1", "skillId": 3, "weight": "CRITICAL" },
+    { "vacancyId": "v_1", "skillId": 9, "weight": "IMPORTANT" },
+
+    { "vacancyId": "v_2", "skillId": 2, "weight": "CRITICAL" },
+    { "vacancyId": "v_2", "skillId": 17, "weight": "IMPORTANT" },
+    { "vacancyId": "v_2", "skillId": 37, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_3", "skillId": 1, "weight": "CRITICAL" },
+    { "vacancyId": "v_3", "skillId": 2, "weight": "CRITICAL" },
+    { "vacancyId": "v_3", "skillId": 17, "weight": "IMPORTANT" },
+
+    { "vacancyId": "v_4", "skillId": 50, "weight": "IMPORTANT" },
+    { "vacancyId": "v_4", "skillId": 51, "weight": "CRITICAL" },
+    { "vacancyId": "v_4", "skillId": 65, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_5", "skillId": 13, "weight": "IMPORTANT" },
+    { "vacancyId": "v_5", "skillId": 14, "weight": "CRITICAL" },
+    { "vacancyId": "v_5", "skillId": 9, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_6", "skillId": 26, "weight": "CRITICAL" },
+    { "vacancyId": "v_6", "skillId": 35, "weight": "CRITICAL" },
+    { "vacancyId": "v_6", "skillId": 65, "weight": "IMPORTANT" },
+
+    { "vacancyId": "v_7", "skillId": 7, "weight": "CRITICAL" },
+    { "vacancyId": "v_7", "skillId": 9, "weight": "IMPORTANT" },
+    { "vacancyId": "v_7", "skillId": 35, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_8", "skillId": 13, "weight": "CRITICAL" },
+    { "vacancyId": "v_8", "skillId": 50, "weight": "IMPORTANT" },
+    { "vacancyId": "v_8", "skillId": 53, "weight": "CRITICAL" },
+
+    { "vacancyId": "v_9", "skillId": 25, "weight": "CRITICAL" },
+    { "vacancyId": "v_9", "skillId": 37, "weight": "IMPORTANT" },
+    { "vacancyId": "v_9", "skillId": 9, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_10", "skillId": 26, "weight": "CRITICAL" },
+    { "vacancyId": "v_10", "skillId": 40, "weight": "CRITICAL" },
+    { "vacancyId": "v_10", "skillId": 7, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_11", "skillId": 26, "weight": "CRITICAL" },
+    { "vacancyId": "v_11", "skillId": 17, "weight": "IMPORTANT" },
+    { "vacancyId": "v_11", "skillId": 37, "weight": "NICE_TO_HAVE" },
+
+    { "vacancyId": "v_12", "skillId": 1, "weight": "CRITICAL" },
+    { "vacancyId": "v_12", "skillId": 25, "weight": "CRITICAL" },
+    { "vacancyId": "v_12", "skillId": 9, "weight": "IMPORTANT" }
+  ],
+  "Application": [
+    {
+      "id": "app_1",
+      "vacancyId": "v_5",
+      "studentProfileId": "st_prof_7",
+      "status": "HIRED",
+      "coverLetter": "Дуже хочу працювати у вашій компанії тестувальником.",
+      "createdAt": "2026-09-05T10:00:00Z"
+    },
+    {
+      "id": "app_2",
+      "vacancyId": "v_6",
+      "studentProfileId": "st_prof_6",
+      "status": "HIRED",
+      "coverLetter": "Маю досвід аналізу даних за допомогою Python та SQL.",
+      "createdAt": "2026-09-08T11:00:00Z"
+    },
+    {
+      "id": "app_3",
+      "vacancyId": "v_1",
+      "studentProfileId": "st_prof_1",
+      "status": "OFFERED",
+      "coverLetter": "Вітаю! Чудово володію React та TypeScript.",
+      "createdAt": "2026-10-05T12:00:00Z"
+    },
+    {
+      "id": "app_4",
+      "vacancyId": "v_1",
+      "studentProfileId": "st_prof_11",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Надсилаю своє резюме на вакансію Frontend.",
+      "createdAt": "2026-10-06T13:00:00Z"
+    },
+    {
+      "id": "app_5",
+      "vacancyId": "v_1",
+      "studentProfileId": "st_prof_21",
+      "status": "SHORTLISTED",
+      "coverLetter": "Цікавлюся розробкою інтерфейсів.",
+      "createdAt": "2026-10-07T09:00:00Z"
+    },
+    {
+      "id": "app_6",
+      "vacancyId": "v_1",
+      "studentProfileId": "st_prof_3",
+      "status": "REJECTED",
+      "coverLetter": "Маю широкий спектр навичок.",
+      "createdAt": "2026-10-08T10:00:00Z"
+    },
+    {
+      "id": "app_7",
+      "vacancyId": "v_1",
+      "studentProfileId": "st_prof_13",
+      "status": "WITHDRAWN",
+      "coverLetter": "Передумав подаватись, знайшов іншу позицію.",
+      "createdAt": "2026-10-09T11:00:00Z"
+    },
+    {
+      "id": "app_8",
+      "vacancyId": "v_2",
+      "studentProfileId": "st_prof_2",
+      "status": "OFFERED",
+      "coverLetter": "Досвід роботи з Node.js та Express.",
+      "createdAt": "2026-10-07T14:00:00Z"
+    },
+    {
+      "id": "app_9",
+      "vacancyId": "v_2",
+      "studentProfileId": "st_prof_12",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Готовий до співбесіди.",
+      "createdAt": "2026-10-08T15:00:00Z"
+    },
+    {
+      "id": "app_10",
+      "vacancyId": "v_2",
+      "studentProfileId": "st_prof_23",
+      "status": "SHORTLISTED",
+      "coverLetter": "Бажаю приєднатися до вашої команди.",
+      "createdAt": "2026-10-09T09:30:00Z"
+    },
+    {
+      "id": "app_11",
+      "vacancyId": "v_2",
+      "studentProfileId": "st_prof_3",
+      "status": "REJECTED",
+      "coverLetter": "Хочу спробувати свої сили.",
+      "createdAt": "2026-10-10T10:30:00Z"
+    },
+    {
+      "id": "app_12",
+      "vacancyId": "v_3",
+      "studentProfileId": "st_prof_3",
+      "status": "OFFERED",
+      "coverLetter": "Fullstack розробка — мій пріоритет.",
+      "createdAt": "2026-10-12T11:00:00Z"
+    },
+    {
+      "id": "app_13",
+      "vacancyId": "v_3",
+      "studentProfileId": "st_prof_13",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Надсилаю портфоліо проєктів.",
+      "createdAt": "2026-10-13T12:00:00Z"
+    },
+    {
+      "id": "app_14",
+      "vacancyId": "v_3",
+      "studentProfileId": "st_prof_25",
+      "status": "SHORTLISTED",
+      "coverLetter": "Маю гарні навички командної роботи.",
+      "createdAt": "2026-10-14T13:00:00Z"
+    },
+    {
+      "id": "app_15",
+      "vacancyId": "v_3",
+      "studentProfileId": "st_prof_1",
+      "status": "REJECTED",
+      "coverLetter": "Цікава вакансія.",
+      "createdAt": "2026-10-15T14:00:00Z"
+    },
+    {
+      "id": "app_16",
+      "vacancyId": "v_4",
+      "studentProfileId": "st_prof_4",
+      "status": "OFFERED",
+      "coverLetter": "UI/UX дизайн це моє покликання.",
+      "createdAt": "2026-10-14T09:00:00Z"
+    },
+    {
+      "id": "app_17",
+      "vacancyId": "v_4",
+      "studentProfileId": "st_prof_14",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Портфоліо на Behance.",
+      "createdAt": "2026-10-15T10:00:00Z"
+    },
+    {
+      "id": "app_18",
+      "vacancyId": "v_4",
+      "studentProfileId": "st_prof_24",
+      "status": "VIEWED",
+      "coverLetter": "Вітаю!",
+      "createdAt": "2026-10-16T11:00:00Z"
+    },
+    {
+      "id": "app_19",
+      "vacancyId": "v_4",
+      "studentProfileId": "st_prof_8",
+      "status": "WITHDRAWN",
+      "coverLetter": "Вибачте, відкликаю відгук.",
+      "createdAt": "2026-10-17T12:00:00Z"
+    },
+    {
+      "id": "app_20",
+      "vacancyId": "v_5",
+      "studentProfileId": "st_prof_17",
+      "status": "REJECTED",
+      "coverLetter": "Хочу працювати у вас.",
+      "createdAt": "2026-09-06T10:00:00Z"
+    },
+    {
+      "id": "app_21",
+      "vacancyId": "v_5",
+      "studentProfileId": "st_prof_28",
+      "status": "REJECTED",
+      "coverLetter": "Готова тестувати.",
+      "createdAt": "2026-09-07T11:00:00Z"
+    },
+    {
+      "id": "app_22",
+      "vacancyId": "v_6",
+      "studentProfileId": "st_prof_16",
+      "status": "REJECTED",
+      "coverLetter": "Аналіз даних.",
+      "createdAt": "2026-09-10T12:00:00Z"
+    },
+    {
+      "id": "app_23",
+      "vacancyId": "v_6",
+      "studentProfileId": "st_prof_26",
+      "status": "REJECTED",
+      "coverLetter": "Python та SQL.",
+      "createdAt": "2026-09-11T13:00:00Z"
+    },
+    {
+      "id": "app_24",
+      "vacancyId": "v_7",
+      "studentProfileId": "st_prof_5",
+      "status": "OFFERED",
+      "coverLetter": "DevOps практик.",
+      "createdAt": "2026-10-18T10:00:00Z"
+    },
+    {
+      "id": "app_25",
+      "vacancyId": "v_7",
+      "studentProfileId": "st_prof_15",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Docker та CI/CD.",
+      "createdAt": "2026-10-19T11:00:00Z"
+    },
+    {
+      "id": "app_26",
+      "vacancyId": "v_7",
+      "studentProfileId": "st_prof_27",
+      "status": "SHORTLISTED",
+      "coverLetter": "Цікава інфраструктура.",
+      "createdAt": "2026-10-20T12:00:00Z"
+    },
+    {
+      "id": "app_27",
+      "vacancyId": "v_7",
+      "studentProfileId": "st_prof_9",
+      "status": "VIEWED",
+      "coverLetter": "Готовий до завдань.",
+      "createdAt": "2026-10-21T13:00:00Z"
+    },
+    {
+      "id": "app_28",
+      "vacancyId": "v_8",
+      "studentProfileId": "st_prof_8",
+      "status": "OFFERED",
+      "coverLetter": "Бізнес-аналіз та документація.",
+      "createdAt": "2026-10-20T10:00:00Z"
+    },
+    {
+      "id": "app_29",
+      "vacancyId": "v_8",
+      "studentProfileId": "st_prof_18",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Специфікації та вимоги.",
+      "createdAt": "2026-10-21T11:00:00Z"
+    },
+    {
+      "id": "app_30",
+      "vacancyId": "v_8",
+      "studentProfileId": "st_prof_29",
+      "status": "SHORTLISTED",
+      "coverLetter": "Робота з Jira.",
+      "createdAt": "2026-10-22T12:00:00Z"
+    },
+    {
+      "id": "app_31",
+      "vacancyId": "v_8",
+      "studentProfileId": "st_prof_10",
+      "status": "VIEWED",
+      "coverLetter": "Вітаю.",
+      "createdAt": "2026-10-23T13:00:00Z"
+    },
+    {
+      "id": "app_32",
+      "vacancyId": "v_11",
+      "studentProfileId": "st_prof_2",
+      "status": "OFFERED",
+      "coverLetter": "Python backend.",
+      "createdAt": "2026-10-25T10:00:00Z"
+    },
+    {
+      "id": "app_33",
+      "vacancyId": "v_11",
+      "studentProfileId": "st_prof_15",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "FastAPI та Django.",
+      "createdAt": "2026-10-26T11:00:00Z"
+    },
+    {
+      "id": "app_34",
+      "vacancyId": "v_11",
+      "studentProfileId": "st_prof_25",
+      "status": "SHORTLISTED",
+      "coverLetter": "Розробка бекенду.",
+      "createdAt": "2026-10-27T12:00:00Z"
+    },
+    {
+      "id": "app_35",
+      "vacancyId": "v_11",
+      "studentProfileId": "st_prof_5",
+      "status": "VIEWED",
+      "coverLetter": "Цікава позиція.",
+      "createdAt": "2026-10-28T13:00:00Z"
+    },
+    {
+      "id": "app_36",
+      "vacancyId": "v_12",
+      "studentProfileId": "st_prof_1",
+      "status": "OFFERED",
+      "coverLetter": "React & Redux.",
+      "createdAt": "2026-10-25T14:00:00Z"
+    },
+    {
+      "id": "app_37",
+      "vacancyId": "v_12",
+      "studentProfileId": "st_prof_11",
+      "status": "INTERVIEW_INVITED",
+      "coverLetter": "Frontend.",
+      "createdAt": "2026-10-26T15:00:00Z"
+    },
+    {
+      "id": "app_38",
+      "vacancyId": "v_12",
+      "studentProfileId": "st_prof_21",
+      "status": "SHORTLISTED",
+      "coverLetter": "Студент 3 курсу.",
+      "createdAt": "2026-10-27T16:00:00Z"
+    },
+    {
+      "id": "app_39",
+      "vacancyId": "v_12",
+      "studentProfileId": "st_prof_30",
+      "status": "VIEWED",
+      "coverLetter": "Мобільний та веб розробник.",
+      "createdAt": "2026-10-28T10:00:00Z"
+    },
+    {
+      "id": "app_40",
+      "vacancyId": "v_5",
+      "studentProfileId": "st_prof_1",
+      "status": "REJECTED",
+      "coverLetter": "Хочу тестувати.",
+      "createdAt": "2026-09-08T10:00:00Z"
+    }
+  ],
+  "ApplicationStatusHistory": [
+    { "id": "ash_1", "applicationId": "app_1", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_7", "createdAt": "2026-09-05T10:00:00Z" },
+    { "id": "ash_2", "applicationId": "app_1", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_1", "createdAt": "2026-09-06T10:00:00Z" },
+    { "id": "ash_3", "applicationId": "app_1", "fromStatus": "VIEWED", "toStatus": "HIRED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-25T15:00:00Z" },
+
+    { "id": "ash_4", "applicationId": "app_2", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_6", "createdAt": "2026-09-08T11:00:00Z" },
+    { "id": "ash_5", "applicationId": "app_2", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_2", "createdAt": "2026-09-09T11:00:00Z" },
+    { "id": "ash_6", "applicationId": "app_2", "fromStatus": "VIEWED", "toStatus": "HIRED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-28T16:00:00Z" },
+
+    { "id": "ash_7", "applicationId": "app_3", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_1", "createdAt": "2026-10-05T12:00:00Z" },
+    { "id": "ash_8", "applicationId": "app_3", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-10T12:00:00Z" },
+
+    { "id": "ash_9", "applicationId": "app_4", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_11", "createdAt": "2026-10-06T13:00:00Z" },
+    { "id": "ash_10", "applicationId": "app_4", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-11T13:00:00Z" },
+
+    { "id": "ash_11", "applicationId": "app_5", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_21", "createdAt": "2026-10-07T09:00:00Z" },
+    { "id": "ash_12", "applicationId": "app_5", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-10T09:00:00Z" },
+
+    { "id": "ash_13", "applicationId": "app_6", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_3", "createdAt": "2026-10-08T10:00:00Z" },
+    { "id": "ash_14", "applicationId": "app_6", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-12T10:00:00Z" },
+
+    { "id": "ash_15", "applicationId": "app_7", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_13", "createdAt": "2026-10-09T11:00:00Z" },
+    { "id": "ash_16", "applicationId": "app_7", "fromStatus": "SENT", "toStatus": "WITHDRAWN", "changedByUserId": "u_st_13", "createdAt": "2026-10-11T11:00:00Z" },
+
+    { "id": "ash_17", "applicationId": "app_8", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_2", "createdAt": "2026-10-07T14:00:00Z" },
+    { "id": "ash_18", "applicationId": "app_8", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-12T14:00:00Z" },
+
+    { "id": "ash_19", "applicationId": "app_9", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_12", "createdAt": "2026-10-08T15:00:00Z" },
+    { "id": "ash_20", "applicationId": "app_9", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-13T15:00:00Z" },
+
+    { "id": "ash_21", "applicationId": "app_10", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_23", "createdAt": "2026-10-09T09:30:00Z" },
+    { "id": "ash_22", "applicationId": "app_10", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-12T09:30:00Z" },
+
+    { "id": "ash_23", "applicationId": "app_11", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_3", "createdAt": "2026-10-10T10:30:00Z" },
+    { "id": "ash_24", "applicationId": "app_11", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-14T10:30:00Z" },
+
+    { "id": "ash_25", "applicationId": "app_12", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_3", "createdAt": "2026-10-12T11:00:00Z" },
+    { "id": "ash_26", "applicationId": "app_12", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-16T11:00:00Z" },
+
+    { "id": "ash_27", "applicationId": "app_13", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_13", "createdAt": "2026-10-13T12:00:00Z" },
+    { "id": "ash_28", "applicationId": "app_13", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-17T12:00:00Z" },
+
+    { "id": "ash_29", "applicationId": "app_14", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_25", "createdAt": "2026-10-14T13:00:00Z" },
+    { "id": "ash_30", "applicationId": "app_14", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-18T13:00:00Z" },
+
+    { "id": "ash_31", "applicationId": "app_15", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_1", "createdAt": "2026-10-15T14:00:00Z" },
+    { "id": "ash_32", "applicationId": "app_15", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-19T14:00:00Z" },
+
+    { "id": "ash_33", "applicationId": "app_16", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_4", "createdAt": "2026-10-14T09:00:00Z" },
+    { "id": "ash_34", "applicationId": "app_16", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-18T09:00:00Z" },
+
+    { "id": "ash_35", "applicationId": "app_17", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_14", "createdAt": "2026-10-15T10:00:00Z" },
+    { "id": "ash_36", "applicationId": "app_17", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-19T10:00:00Z" },
+
+    { "id": "ash_37", "applicationId": "app_18", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_24", "createdAt": "2026-10-16T11:00:00Z" },
+    { "id": "ash_38", "applicationId": "app_18", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-19T11:00:00Z" },
+
+    { "id": "ash_39", "applicationId": "app_19", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_8", "createdAt": "2026-10-17T12:00:00Z" },
+    { "id": "ash_40", "applicationId": "app_19", "fromStatus": "SENT", "toStatus": "WITHDRAWN", "changedByUserId": "u_st_8", "createdAt": "2026-10-19T12:00:00Z" },
+
+    { "id": "ash_41", "applicationId": "app_20", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_17", "createdAt": "2026-09-06T10:00:00Z" },
+    { "id": "ash_42", "applicationId": "app_20", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_1", "createdAt": "2026-09-10T10:00:00Z" },
+
+    { "id": "ash_43", "applicationId": "app_21", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_28", "createdAt": "2026-09-07T11:00:00Z" },
+    { "id": "ash_44", "applicationId": "app_21", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_1", "createdAt": "2026-09-11T11:00:00Z" },
+
+    { "id": "ash_45", "applicationId": "app_22", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_16", "createdAt": "2026-09-10T12:00:00Z" },
+    { "id": "ash_46", "applicationId": "app_22", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_2", "createdAt": "2026-09-15T12:00:00Z" },
+
+    { "id": "ash_47", "applicationId": "app_23", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_26", "createdAt": "2026-09-11T13:00:00Z" },
+    { "id": "ash_48", "applicationId": "app_23", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_2", "createdAt": "2026-09-16T13:00:00Z" },
+
+    { "id": "ash_49", "applicationId": "app_24", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_5", "createdAt": "2026-10-18T10:00:00Z" },
+    { "id": "ash_50", "applicationId": "app_24", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-22T10:00:00Z" },
+
+    { "id": "ash_51", "applicationId": "app_25", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_15", "createdAt": "2026-10-19T11:00:00Z" },
+    { "id": "ash_52", "applicationId": "app_25", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-23T11:00:00Z" },
+
+    { "id": "ash_53", "applicationId": "app_26", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_27", "createdAt": "2026-10-20T12:00:00Z" },
+    { "id": "ash_54", "applicationId": "app_26", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-24T12:00:00Z" },
+
+    { "id": "ash_55", "applicationId": "app_27", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_9", "createdAt": "2026-10-21T13:00:00Z" },
+    { "id": "ash_56", "applicationId": "app_27", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_3", "createdAt": "2026-10-25T13:00:00Z" },
+
+    { "id": "ash_57", "applicationId": "app_28", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_8", "createdAt": "2026-10-20T10:00:00Z" },
+    { "id": "ash_58", "applicationId": "app_28", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-24T10:00:00Z" },
+
+    { "id": "ash_59", "applicationId": "app_29", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_18", "createdAt": "2026-10-21T11:00:00Z" },
+    { "id": "ash_60", "applicationId": "app_29", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-25T11:00:00Z" },
+
+    { "id": "ash_61", "applicationId": "app_30", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_29", "createdAt": "2026-10-22T12:00:00Z" },
+    { "id": "ash_62", "applicationId": "app_30", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-26T12:00:00Z" },
+
+    { "id": "ash_63", "applicationId": "app_31", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_10", "createdAt": "2026-10-23T13:00:00Z" },
+    { "id": "ash_64", "applicationId": "app_31", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_4", "createdAt": "2026-10-27T13:00:00Z" },
+
+    { "id": "ash_65", "applicationId": "app_32", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_2", "createdAt": "2026-10-25T10:00:00Z" },
+    { "id": "ash_66", "applicationId": "app_32", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-29T10:00:00Z" },
+
+    { "id": "ash_67", "applicationId": "app_33", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_15", "createdAt": "2026-10-26T11:00:00Z" },
+    { "id": "ash_68", "applicationId": "app_33", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-30T11:00:00Z" },
+
+    { "id": "ash_69", "applicationId": "app_34", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_25", "createdAt": "2026-10-27T12:00:00Z" },
+    { "id": "ash_70", "applicationId": "app_34", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_1", "createdAt": "2026-10-31T12:00:00Z" },
+
+    { "id": "ash_71", "applicationId": "app_35", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_5", "createdAt": "2026-10-28T13:00:00Z" },
+    { "id": "ash_72", "applicationId": "app_35", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_1", "createdAt": "2026-11-01T13:00:00Z" },
+
+    { "id": "ash_73", "applicationId": "app_36", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_1", "createdAt": "2026-10-25T14:00:00Z" },
+    { "id": "ash_74", "applicationId": "app_36", "fromStatus": "SENT", "toStatus": "OFFERED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-30T14:00:00Z" },
+
+    { "id": "ash_75", "applicationId": "app_37", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_11", "createdAt": "2026-10-26T15:00:00Z" },
+    { "id": "ash_76", "applicationId": "app_37", "fromStatus": "SENT", "toStatus": "INTERVIEW_INVITED", "changedByUserId": "u_hr_2", "createdAt": "2026-10-31T15:00:00Z" },
+
+    { "id": "ash_77", "applicationId": "app_38", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_21", "createdAt": "2026-10-27T16:00:00Z" },
+    { "id": "ash_78", "applicationId": "app_38", "fromStatus": "SENT", "toStatus": "SHORTLISTED", "changedByUserId": "u_hr_2", "createdAt": "2026-11-01T16:00:00Z" },
+
+    { "id": "ash_79", "applicationId": "app_39", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_30", "createdAt": "2026-10-28T10:00:00Z" },
+    { "id": "ash_80", "applicationId": "app_39", "fromStatus": "SENT", "toStatus": "VIEWED", "changedByUserId": "u_hr_2", "createdAt": "2026-11-02T10:00:00Z" },
+
+    { "id": "ash_81", "applicationId": "app_40", "fromStatus": null, "toStatus": "SENT", "changedByUserId": "u_st_1", "createdAt": "2026-09-08T10:00:00Z" },
+    { "id": "ash_82", "applicationId": "app_40", "fromStatus": "SENT", "toStatus": "REJECTED", "changedByUserId": "u_hr_1", "createdAt": "2026-09-12T10:00:00Z" }
+  ]
+}

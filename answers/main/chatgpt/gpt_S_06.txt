@@ -1,0 +1,80 @@
+{
+  "User": [
+    {"id":"u1","clerkUserId":"clerk_fake_hr_001","email":"oleksii.melnyk@example.com","role":"HR","status":"ACTIVE","firstName":"Олексій","lastName":"Мельник","middleName":"Ігорович","createdAt":"2026-08-01T09:00:00Z"},
+    {"id":"u2","clerkUserId":"clerk_fake_hr_002","email":"yuliia.savchuk@example.com","role":"HR","status":"ACTIVE","firstName":"Юлія","lastName":"Савчук","middleName":"Романівна","createdAt":"2026-08-03T10:15:00Z"},
+    {"id":"u3","clerkUserId":"clerk_fake_st_001","email":"andrii.koval@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Андрій","lastName":"Коваль","middleName":"Олегович","createdAt":"2026-08-05T08:30:00Z"},
+    {"id":"u4","clerkUserId":"clerk_fake_st_002","email":"mariia.bondar@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Марія","lastName":"Бондар","middleName":"Вікторівна","createdAt":"2026-08-06T11:20:00Z"},
+    {"id":"u5","clerkUserId":"clerk_fake_st_003","email":"danylo.tkach@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Данило","lastName":"Ткач","middleName":"Сергійович","createdAt":"2026-08-07T12:45:00Z"},
+    {"id":"u6","clerkUserId":"clerk_fake_st_004","email":"sofiia.marchenko@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Софія","lastName":"Марченко","middleName":"Андріївна","createdAt":"2026-08-08T14:10:00Z"},
+    {"id":"u7","clerkUserId":"clerk_fake_st_005","email":"maksym.romanenko@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Максим","lastName":"Романенко","middleName":"Петрович","createdAt":"2026-08-09T09:40:00Z"},
+    {"id":"u8","clerkUserId":"clerk_fake_st_006","email":"iryna.lysenko@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Ірина","lastName":"Лисенко","middleName":"Олександрівна","createdAt":"2026-08-10T10:05:00Z"},
+    {"id":"u9","clerkUserId":"clerk_fake_st_007","email":"vladyslav.shevchenko@example.com","role":"STUDENT","status":"ACTIVE","firstName":"Владислав","lastName":"Шевченко","middleName":null,"createdAt":"2026-08-11T13:25:00Z"}
+  ],
+  "Company": [
+    {"id":"c1","registrationType":"COMPANY","registrationNumber":"FIC-2026-001","legalName":"ТОВ «Діджитал Горизонт»","publicName":"Digital Horizon","foundationYear":2020,"employeeCount":"SIZE_21_50","about":"Вигадана українська IT-компанія, що розробляє вебзастосунки та цифрові продукти для малого й середнього бізнесу. Команда приділяє увагу навчанню молодих спеціалістів і розвитку початківців.","publicEmail":"contact@digitalhorizon.example.com","verificationStatus":"APPROVED","createdAt":"2026-07-20T09:00:00Z"},
+    {"id":"c2","registrationType":"FOP","registrationNumber":"FOP-FIC-2026-002","legalName":"ФОП Гриценко Павло Дмитрович","publicName":"CodeCraft Studio","foundationYear":2023,"employeeCount":"SIZE_1_10","about":"Вигадана невелика студія розробки програмного забезпечення. Спеціалізується на створенні вебсервісів, автоматизації робочих процесів та технічному консультуванні.","publicEmail":"hello@codecraft.example.com","verificationStatus":"PENDING","createdAt":"2026-08-02T10:30:00Z"}
+  ],
+  "HrProfile": [
+    {"id":"hrp1","userId":"u1","companyId":"c1","position":"HR-менеджер"},
+    {"id":"hrp2","userId":"u2","companyId":"c2","position":"Менеджер з підбору персоналу"}
+  ],
+  "StudentProfile": [
+    {"id":"sp1","userId":"u3","gender":"MALE","birthDate":"2004-02-15T00:00:00Z","contactEmail":"andrii.koval@example.com","primaryPhone":"+380501112201","desiredPosition":"Frontend-розробник","minSalary":20000,"visibility":"PUBLIC"},
+    {"id":"sp2","userId":"u4","gender":"FEMALE","birthDate":"2005-06-22T00:00:00Z","contactEmail":"mariia.bondar@example.com","primaryPhone":"+380671112202","desiredPosition":"Frontend-розробник","minSalary":18000,"visibility":"PUBLIC"},
+    {"id":"sp3","userId":"u5","gender":"MALE","birthDate":"2003-11-08T00:00:00Z","contactEmail":"danylo.tkach@example.com","primaryPhone":"+380931112203","desiredPosition":"Інженер з автоматизації тестування","minSalary":22000,"visibility":"APPLIED_ONLY"},
+    {"id":"sp4","userId":"u6","gender":"FEMALE","birthDate":"2004-09-17T00:00:00Z","contactEmail":"sofiia.marchenko@example.com","primaryPhone":"+380631112204","desiredPosition":"Frontend-розробник","minSalary":20000,"visibility":"PUBLIC"},
+    {"id":"sp5","userId":"u7","gender":"MALE","birthDate":"2005-01-30T00:00:00Z","contactEmail":"maksym.romanenko@example.com","primaryPhone":"+380991112205","desiredPosition":"Frontend-розробник","minSalary":17000,"visibility":"HIDDEN"},
+    {"id":"sp6","userId":"u8","gender":"FEMALE","birthDate":"2003-04-12T00:00:00Z","contactEmail":"iryna.lysenko@example.com","primaryPhone":"+380681112206","desiredPosition":"Інженер з автоматизації тестування","minSalary":23000,"visibility":"PUBLIC"},
+    {"id":"sp7","userId":"u9","gender":"MALE","birthDate":"2004-12-03T00:00:00Z","contactEmail":"vladyslav.shevchenko@example.com","primaryPhone":"+380731112207","desiredPosition":"Інженер з автоматизації тестування","minSalary":19000,"visibility":"APPLIED_ONLY"}
+  ],
+  "Vacancy": [
+    {"id":"v1","hrProfileId":"hrp1","companyId":"c1","title":"Junior Frontend Developer","description":"Digital Horizon шукає початківця Frontend-розробника для роботи над вебзастосунками. Основні завдання: створення та підтримка користувацьких інтерфейсів, робота з React і TypeScript, взаємодія з дизайнерами та Backend-командою. Очікуємо базові знання JavaScript, розуміння HTML і CSS, знання Git та готовність навчатися. Досвід комерційної роботи не обов'язковий.","professionId":1,"minSalary":20000,"maxSalary":30000,"salaryPeriod":"PER_MONTH","status":"ACTIVE","createdAt":"2026-10-28T09:00:00Z","publishedAt":"2026-11-01T08:00:00Z","closingDate":"2026-12-20T23:59:59Z","closedAt":null,"closeReason":null},
+    {"id":"v2","hrProfileId":"hrp1","companyId":"c1","title":"Junior QA Automation Engineer","description":"Компанія Digital Horizon запрошує Junior QA Automation Engineer до команди тестування. Майбутній спеціаліст братиме участь у підготовці тестових сценаріїв, автоматизації перевірок, тестуванні REST API та аналізі результатів. Необхідні базові знання Python або Java, розуміння принципів тестування програмного забезпечення, навички роботи з Postman і Git. Пропонуємо підтримку наставника та можливість професійного розвитку.","professionId":5,"minSalary":18000,"maxSalary":28000,"salaryPeriod":"PER_MONTH","status":"CLOSED","createdAt":"2026-08-20T09:30:00Z","publishedAt":"2026-09-01T08:00:00Z","closingDate":"2026-10-31T23:59:59Z","closedAt":"2026-10-12T15:00:00Z","closeReason":"HIRED"},
+    {"id":"v3","hrProfileId":"hrp2","companyId":"c2","title":"Backend Developer Intern","description":"CodeCraft Studio готує набір на позицію стажера Backend Developer. Майбутній стажер долучатиметься до розробки серверної частини вебсервісів, створення REST API та роботи з базами даних PostgreSQL. Бажані базові знання Node.js, SQL і Git. Важливими є уважність, відповідальність і готовність працювати в команді. Вакансія перебуває на етапі підготовки.","professionId":2,"minSalary":15000,"maxSalary":22000,"salaryPeriod":"PER_MONTH","status":"DRAFT","createdAt":"2026-11-10T12:00:00Z","publishedAt":null,"closingDate":"2027-03-31T23:59:59Z","closedAt":null,"closeReason":null}
+  ],
+  "VacancySkill": [
+    {"vacancyId":"v1","skillId":1,"weight":"CRITICAL"},
+    {"vacancyId":"v1","skillId":3,"weight":"CRITICAL"},
+    {"vacancyId":"v1","skillId":9,"weight":"IMPORTANT"},
+    {"vacancyId":"v2","skillId":14,"weight":"CRITICAL"},
+    {"vacancyId":"v2","skillId":26,"weight":"IMPORTANT"},
+    {"vacancyId":"v2","skillId":50,"weight":"NICE_TO_HAVE"},
+    {"vacancyId":"v3","skillId":2,"weight":"CRITICAL"},
+    {"vacancyId":"v3","skillId":17,"weight":"CRITICAL"},
+    {"vacancyId":"v3","skillId":37,"weight":"IMPORTANT"}
+  ],
+  "Application": [
+    {"id":"ap1","vacancyId":"v1","studentProfileId":"sp1","status":"VIEWED","coverLetter":"Вітаю! Навчаюся за спеціальністю комп'ютерні науки та розвиваю навички frontend-розробки. Працював над навчальними проєктами з JavaScript і React. Хочу долучитися до вашої команди, щоб застосовувати знання на практиці та вдосконалюватися.","createdAt":"2026-11-02T09:15:00Z"},
+    {"id":"ap2","vacancyId":"v1","studentProfileId":"sp2","status":"SHORTLISTED","coverLetter":"Доброго дня! Маю базові знання TypeScript, React та Git. Під час навчання створювала невеликі вебзастосунки й працювала в команді над навчальним проєктом. Цікавить можливість професійного розвитку у вашій компанії.","createdAt":"2026-11-03T10:20:00Z"},
+    {"id":"ap3","vacancyId":"v1","studentProfileId":"sp3","status":"INTERVIEW_INVITED","coverLetter":"Вітаю! Маю досвід створення інтерфейсів у межах університетських проєктів. Знайомий із React, JavaScript і принципами взаємодії з REST API. Готовий навчатися та брати участь у розробці реальних продуктів.","createdAt":"2026-11-04T11:40:00Z"},
+    {"id":"ap4","vacancyId":"v1","studentProfileId":"sp4","status":"OFFERED","coverLetter":"Доброго дня! Я студентка технічної спеціальності, цікавлюся frontend-розробкою та маю практичні навички роботи з React і TypeScript. Буду рада можливості приєднатися до команди та розвиватися разом із нею.","createdAt":"2026-11-05T08:50:00Z"},
+    {"id":"ap5","vacancyId":"v1","studentProfileId":"sp5","status":"REJECTED","coverLetter":"Вітаю! Хочу спробувати себе на позиції Junior Frontend Developer. Вивчаю JavaScript, React і Git, маю кілька навчальних робіт у портфоліо. Зацікавлений у роботі над командними проєктами.","createdAt":"2026-11-06T13:10:00Z"},
+    {"id":"ap6","vacancyId":"v2","studentProfileId":"sp1","status":"HIRED","coverLetter":"Доброго дня! Цікавлюся автоматизацією тестування та маю базові знання Python і Postman. Під час навчання працював із тестовими сценаріями й аналізував результати перевірок. Хочу розвиватися в напрямі QA Automation.","createdAt":"2026-09-10T09:00:00Z"},
+    {"id":"ap7","vacancyId":"v2","studentProfileId":"sp2","status":"VIEWED","coverLetter":"Вітаю! Мене цікавить тестування програмного забезпечення. Знайома з основами тест-дизайну, Postman і базовими запитами SQL. Хочу отримати практичний досвід роботи над реальним продуктом.","createdAt":"2026-09-12T10:30:00Z"},
+    {"id":"ap8","vacancyId":"v2","studentProfileId":"sp6","status":"SHORTLISTED","coverLetter":"Доброго дня! Вивчаю автоматизацію тестування, Python та основи роботи з API. Маю досвід написання простих автоматизованих перевірок у навчальних проєктах. Зацікавлена у вакансії та можливості працювати з наставником.","createdAt":"2026-09-15T12:15:00Z"},
+    {"id":"ap9","vacancyId":"v2","studentProfileId":"sp7","status":"WITHDRAWN","coverLetter":"Вітаю! Навчаюся за IT-спеціальністю та хочу розвиватися у сфері автоматизованого тестування. Знайомий із Python, Git і основами тестування вебзастосунків.","createdAt":"2026-09-18T14:25:00Z"},
+    {"id":"ap10","vacancyId":"v2","studentProfileId":"sp3","status":"OFFERED","coverLetter":"Доброго дня! Маю базову підготовку з тестування програмного забезпечення, знайомий із Postman та Python. Прагну поглибити знання з автоматизації тестів і долучитися до роботи над якісним програмним продуктом.","createdAt":"2026-09-22T09:45:00Z"}
+  ],
+  "ApplicationStatusHistory": [
+    {"id":"h1","applicationId":"ap1","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-11-02T09:15:00Z"},
+    {"id":"h2","applicationId":"ap1","fromStatus":"SENT","toStatus":"VIEWED","changedByUserId":"u1","createdAt":"2026-11-03T08:30:00Z"},
+    {"id":"h3","applicationId":"ap2","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-11-03T10:20:00Z"},
+    {"id":"h4","applicationId":"ap2","fromStatus":"SENT","toStatus":"SHORTLISTED","changedByUserId":"u1","createdAt":"2026-11-05T12:00:00Z"},
+    {"id":"h5","applicationId":"ap3","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-11-04T11:40:00Z"},
+    {"id":"h6","applicationId":"ap3","fromStatus":"SENT","toStatus":"INTERVIEW_INVITED","changedByUserId":"u1","createdAt":"2026-11-07T09:15:00Z"},
+    {"id":"h7","applicationId":"ap4","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-11-05T08:50:00Z"},
+    {"id":"h8","applicationId":"ap4","fromStatus":"SENT","toStatus":"OFFERED","changedByUserId":"u1","createdAt":"2026-11-10T14:00:00Z"},
+    {"id":"h9","applicationId":"ap5","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-11-06T13:10:00Z"},
+    {"id":"h10","applicationId":"ap5","fromStatus":"SENT","toStatus":"REJECTED","changedByUserId":"u1","createdAt":"2026-11-09T10:45:00Z"},
+    {"id":"h11","applicationId":"ap6","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-09-10T09:00:00Z"},
+    {"id":"h12","applicationId":"ap6","fromStatus":"SENT","toStatus":"HIRED","changedByUserId":"u1","createdAt":"2026-09-20T14:30:00Z"},
+    {"id":"h13","applicationId":"ap7","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-09-12T10:30:00Z"},
+    {"id":"h14","applicationId":"ap7","fromStatus":"SENT","toStatus":"VIEWED","changedByUserId":"u1","createdAt":"2026-09-13T11:00:00Z"},
+    {"id":"h15","applicationId":"ap8","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-09-15T12:15:00Z"},
+    {"id":"h16","applicationId":"ap8","fromStatus":"SENT","toStatus":"SHORTLISTED","changedByUserId":"u1","createdAt":"2026-09-21T10:20:00Z"},
+    {"id":"h17","applicationId":"ap9","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-09-18T14:25:00Z"},
+    {"id":"h18","applicationId":"ap9","fromStatus":"SENT","toStatus":"WITHDRAWN","changedByUserId":"u9","createdAt":"2026-09-19T09:40:00Z"},
+    {"id":"h19","applicationId":"ap10","fromStatus":null,"toStatus":"SENT","changedByUserId":null,"createdAt":"2026-09-22T09:45:00Z"},
+    {"id":"h20","applicationId":"ap10","fromStatus":"SENT","toStatus":"OFFERED","changedByUserId":"u1","createdAt":"2026-09-30T13:20:00Z"}
+  ]
+}
