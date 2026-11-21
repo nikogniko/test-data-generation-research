@@ -1,0 +1,546 @@
+Результати основних запусків
+Джерело: журнал logs/run_log.xlsx, аркуш «Основні запуски»; файл створює tools/run_all.py.
+
+Позначення
+  Г1, Г2, Г3 — частка порушених перевірок, %: Г1 — правила 1.3–1.6, Г2 — 2.1–2.6, Г3 — 3.1–3.10
+  Г2* — група 2 без правила 2.5; Г3° — група 3 без правил 3.1–3.3
+  Заг — усі правила 1.3–3.10; Заг* — усі правила без 2.5 (за Г2*, Г3 і Заг* перевіряються H1 і H2)
+  2.5 — правило 2.5 «дата завершення активної вакансії пізніша за дату запуску»: порушено / оцінено
+  «порушено / оцінено» — кількість перевірок; у дужках — перевірки з результатом «не оцінюється»
+  «—» — значення немає: відповідь не прочитано або поле журналу не заповнено
+
+
+1. Запуски
+
+№   Раунд  Модель    Обсяг  Повтор  Дата        «Продовжити»  Стан   Файл відповіді
+--  -----  --------  -----  ------  ----------  ------------  -----  ---------------------------------------
+ 1      1  DeepSeek  M           1  14.11.2026             1  повна  answers/main/deepseek/ds_M_01.txt
+ 2      1  Gemini    S           1  14.11.2026             0  повна  answers/main/gemini/gemini_S_01.txt
+ 3      1  ChatGPT   L           1  14.11.2026             0  повна  answers/main/chatgpt/gpt_L_01.txt
+ 4      1  DeepSeek  L           1  14.11.2026             2  повна  answers/main/deepseek/ds_L_01.txt
+ 5      1  ChatGPT   S           1  14.11.2026             0  повна  answers/main/chatgpt/gpt_S_01.txt
+ 6      1  DeepSeek  S           1  14.11.2026             0  повна  answers/main/deepseek/ds_S_01.txt
+ 7      1  Gemini    M           1  14.11.2026             0  повна  answers/main/gemini/gemini_M_01.txt
+ 8      1  Gemini    L           1  14.11.2026             0  повна  answers/main/gemini/gemini_L_01.txt
+ 9      1  ChatGPT   M           1  14.11.2026             0  повна  answers/main/chatgpt/gpt_M_01.txt
+10      2  Gemini    L           2  14.11.2026             0  повна  answers/main/gemini/gemini_L_02.txt
+11      2  ChatGPT   L           2  14.11.2026             0  повна  answers/main/chatgpt/gpt_L_02.txt
+12      2  ChatGPT   S           2  14.11.2026             0  повна  answers/main/chatgpt/gpt_S_02.txt
+13      2  ChatGPT   M           2  14.11.2026             0  повна  answers/main/chatgpt/gpt_M_02.txt
+14      2  Gemini    S           2  14.11.2026             0  повна  answers/main/gemini/gemini_S_02.txt
+15      2  Gemini    M           2  14.11.2026             0  повна  answers/main/gemini/gemini_M_02.txt
+16      2  DeepSeek  S           2  14.11.2026             0  повна  answers/main/deepseek/ds_S_02.txt
+17      2  DeepSeek  M           2  14.11.2026             1  повна  answers/main/deepseek/ds_M_02.txt
+18      2  DeepSeek  L           2  14.11.2026             3  повна  answers/main/deepseek/ds_L_02.txt
+19      3  DeepSeek  M           3  15.11.2026             1  повна  answers/main/deepseek/ds_M_03.txt
+20      3  DeepSeek  L           3  15.11.2026             2  повна  answers/main/deepseek/ds_L_03.txt
+22      3  Gemini    L           3  15.11.2026             0  повна  answers/main/gemini/gemini_L_03.txt
+23      3  Gemini    S           3  15.11.2026             0  повна  answers/main/gemini/gemini_S_03.txt
+24      3  ChatGPT   S           3  15.11.2026             0  повна  answers/main/chatgpt/gpt_S_03.txt
+25      3  DeepSeek  S           3  15.11.2026             0  повна  answers/main/deepseek/ds_S_03.txt
+26      3  Gemini    M           3  15.11.2026             0  повна  answers/main/gemini/gemini_M_03.txt
+27      3  ChatGPT   M           3  15.11.2026             0  повна  answers/main/chatgpt/gpt_M_03.txt
+28      4  DeepSeek  S           4  15.11.2026             0  повна  answers/main/deepseek/ds_S_04.txt
+29      4  ChatGPT   S           4  15.11.2026             0  повна  answers/main/chatgpt/gpt_S_04.txt
+30      4  ChatGPT   M           4  15.11.2026             0  повна  answers/main/chatgpt/gpt_M_04.txt
+31      4  Gemini    M           4  15.11.2026             0  повна  answers/main/gemini/gemini_M_04.txt
+32      4  DeepSeek  L           4  15.11.2026             3  повна  answers/main/deepseek/ds_L_04.txt
+33      4  ChatGPT   L           4  15.11.2026             0  повна  answers/main/chatgpt/gpt_L_04.txt
+34      4  DeepSeek  M           4  15.11.2026             1  повна  answers/main/deepseek/ds_M_04.txt
+35      4  Gemini    S           4  15.11.2026             0  повна  answers/main/gemini/gemini_S_04.txt
+36      4  Gemini    L           4  15.11.2026             0  повна  answers/main/gemini/gemini_L_04.txt
+37      5  Gemini    S           5  16.11.2026             0  повна  answers/main/gemini/gemini_S_05.txt
+38      5  ChatGPT   S           5  16.11.2026             0  повна  answers/main/chatgpt/gpt_S_05.txt
+39      5  DeepSeek  M           5  16.11.2026             1  повна  answers/main/deepseek/ds_M_05.txt
+40      5  DeepSeek  L           5  16.11.2026             2  повна  answers/main/deepseek/ds_L_05.txt
+41      5  ChatGPT   L           5  16.11.2026             0  повна  answers/main/chatgpt/gpt_L_05.txt
+42      5  DeepSeek  S           5  16.11.2026             0  повна  answers/main/deepseek/ds_S_05.txt
+43      5  Gemini    M           5  16.11.2026             0  повна  answers/main/gemini/gemini_M_05.txt
+44      5  ChatGPT   M           5  16.11.2026             0  повна  answers/main/chatgpt/gpt_M_05.txt
+45      5  Gemini    L           5  16.11.2026             0  повна  answers/main/gemini/gemini_L_05.txt
+46      6  DeepSeek  M           6  16.11.2026             1  повна  answers/main/deepseek/ds_M_06.txt
+47      6  Gemini    S           6  16.11.2026             0  повна  answers/main/gemini/gemini_S_06.txt
+48      6  ChatGPT   M           6  16.11.2026             0  повна  answers/main/chatgpt/gpt_M_06.txt
+49      6  DeepSeek  L           6  16.11.2026             3  повна  answers/main/deepseek/ds_L_06.txt
+50      6  ChatGPT   L           6  16.11.2026             0  повна  answers/main/chatgpt/gpt_L_06.txt
+51      6  Gemini    L           6  16.11.2026             0  повна  answers/main/gemini/gemini_L_06.txt
+52      6  DeepSeek  S           6  16.11.2026             0  повна  answers/main/deepseek/ds_S_06.txt
+53      6  ChatGPT   S           6  16.11.2026             0  повна  answers/main/chatgpt/gpt_S_06.txt
+54      6  Gemini    M           6  16.11.2026             0  повна  answers/main/gemini/gemini_M_06.txt
+55      7  Gemini    L           7  17.11.2026             0  повна  answers/main/gemini/gemini_L_07.txt
+56      7  ChatGPT   L           7  17.11.2026             0  повна  answers/main/chatgpt/gpt_L_07.txt
+57      7  DeepSeek  L           7  17.11.2026             2  повна  answers/main/deepseek/ds_L_07.txt
+58      7  ChatGPT   S           7  17.11.2026             0  повна  answers/main/chatgpt/gpt_S_07.txt
+59      7  Gemini    S           7  17.11.2026             0  повна  answers/main/gemini/gemini_S_07.txt
+60      7  DeepSeek  M           7  17.11.2026             1  повна  answers/main/deepseek/ds_M_07.txt
+61      7  Gemini    M           7  17.11.2026             0  повна  answers/main/gemini/gemini_M_07.txt
+62      7  DeepSeek  S           7  17.11.2026             0  повна  answers/main/deepseek/ds_S_07.txt
+63      7  ChatGPT   M           7  17.11.2026             0  повна  answers/main/chatgpt/gpt_M_07.txt
+64      8  ChatGPT   M           8  17.11.2026             0  повна  answers/main/chatgpt/gpt_M_08.txt
+65      8  ChatGPT   S           8  17.11.2026             0  повна  answers/main/chatgpt/gpt_S_08.txt
+66      8  ChatGPT   L           8  17.11.2026             0  повна  answers/main/chatgpt/gpt_L_08.txt
+67      8  Gemini    L           8  17.11.2026             0  повна  answers/main/gemini/gemini_L_08.txt
+68      8  DeepSeek  M           8  17.11.2026             1  повна  answers/main/deepseek/ds_M_08.txt
+69      8  Gemini    S           8  17.11.2026             0  повна  answers/main/gemini/gemini_S_08.txt
+70      8  DeepSeek  L           8  17.11.2026             3  повна  answers/main/deepseek/ds_L_08.txt
+71      8  Gemini    M           8  17.11.2026             0  повна  answers/main/gemini/gemini_M_08.txt
+72      8  DeepSeek  S           8  17.11.2026             0  повна  answers/main/deepseek/ds_S_08.txt
+73      9  DeepSeek  L           9  18.11.2026             2  повна  answers/main/deepseek/ds_L_09.txt
+74      9  ChatGPT   M           9  18.11.2026             0  повна  answers/main/chatgpt/gpt_M_09.txt
+75      9  DeepSeek  M           9  18.11.2026             1  повна  answers/main/deepseek/ds_M_09.txt
+76      9  Gemini    L           9  18.11.2026             0  повна  answers/main/gemini/gemini_L_09.txt
+77      9  Gemini    M           9  18.11.2026             0  повна  answers/main/gemini/gemini_M_09.txt
+78      9  ChatGPT   S           9  18.11.2026             0  повна  answers/main/chatgpt/gpt_S_09.txt
+79      9  DeepSeek  S           9  18.11.2026             0  повна  answers/main/deepseek/ds_S_09.txt
+80      9  ChatGPT   L           9  18.11.2026             0  повна  answers/main/chatgpt/gpt_L_09_clean.txt
+81      9  Gemini    S           9  18.11.2026             0  повна  answers/main/gemini/gemini_S_09.txt
+82     10  Gemini    M          10  18.11.2026             0  повна  answers/main/gemini/gemini_M_10.txt
+83     10  Gemini    L          10  18.11.2026             0  повна  answers/main/gemini/gemini_L_10.txt
+84     10  DeepSeek  L          10  18.11.2026             3  повна  answers/main/deepseek/ds_L_10.txt
+85     10  DeepSeek  S          10  18.11.2026             0  повна  answers/main/deepseek/ds_S_10.txt
+86     10  ChatGPT   S          10  18.11.2026             0  повна  answers/main/chatgpt/gpt_S_10.txt
+87     10  ChatGPT   M          10  18.11.2026             0  повна  answers/main/chatgpt/gpt_M_10.txt
+88     10  Gemini    S          10  18.11.2026             0  повна  answers/main/gemini/gemini_S_10.txt
+89     10  ChatGPT   L          10  18.11.2026             0  повна  answers/main/chatgpt/gpt_L_10.txt
+
+
+2. Обсяг відповідей
+
+№   Модель    Обсяг  Стан (валідатор)  Символів  Записів  Відхилення від обсягу  Придатні записи, %  Записи для П1, %
+--  --------  -----  ----------------  --------  -------  ---------------------  ------------------  ----------------
+ 1  DeepSeek  M      прочитано            32836      141                      0               98,58              1,42
+ 2  Gemini    S      прочитано            16810       70                      0                 100                 0
+ 3  ChatGPT   L      прочитано            40748      246                      0                 100                 0
+ 4  DeepSeek  L      прочитано            59509      282                      0               99,65              0,35
+ 5  ChatGPT   S      прочитано            17798       63                      0                 100                 0
+ 6  DeepSeek  S      прочитано            16342       71                      0               97,18              2,82
+ 7  Gemini    M      прочитано            32699      138                      0                 100                 0
+ 8  Gemini    L      прочитано            58554      267                      0                 100                 0
+ 9  ChatGPT   M      прочитано            24416      123                      0                 100                 0
+10  Gemini    L      прочитано            49171      259                      0                 100                 0
+11  ChatGPT   L      прочитано            61646      246                      0                 100                 0
+12  ChatGPT   S      прочитано            16850       62                      0                 100                 0
+13  ChatGPT   M      прочитано            24249      123                      0                 100                 0
+14  Gemini    S      прочитано            16612       68                      0                 100                 0
+15  Gemini    M      прочитано            29235      129                      0                 100                 0
+16  DeepSeek  S      прочитано            15468       67                      0                 100                 0
+17  DeepSeek  M      прочитано            26314      141                      0               97,87              2,13
+18  DeepSeek  L      прочитано            48839      270                      0               97,78              2,22
+19  DeepSeek  M      прочитано            33266      142                      0               97,18              2,82
+20  DeepSeek  L      прочитано            55979      250                      0                95,6               4,4
+22  Gemini    L      прочитано            50705      266                      0                 100                 0
+23  Gemini    S      прочитано            16957       69                      0                 100                 0
+24  ChatGPT   S      прочитано            17646       62                      0                 100                 0
+25  DeepSeek  S      прочитано            16861       74                      0                 100                 0
+26  Gemini    M      прочитано            33172      138                      0                 100                 0
+27  ChatGPT   M      прочитано            24259      123                      0                 100                 0
+28  DeepSeek  S      прочитано            14287       62                      0                 100                 0
+29  ChatGPT   S      прочитано            17433       64                      0                 100                 0
+30  ChatGPT   M      прочитано            36942      143                      0                 100                 0
+31  Gemini    M      прочитано            30965      132                      0                 100                 0
+32  DeepSeek  L      прочитано            46129      257                      0               94,94              5,06
+33  ChatGPT   L      прочитано            60494      246                      0                 100                 0
+34  DeepSeek  M      прочитано            29529      141                      0               97,87              2,13
+35  Gemini    S      прочитано            17124       70                      0                 100                 0
+36  Gemini    L      прочитано            56218      253                      0                 100                 0
+37  Gemini    S      прочитано            16388       67                      0                 100                 0
+38  ChatGPT   S      прочитано            18979       76                      0                 100                 0
+39  DeepSeek  M      прочитано            31914      141                      0               98,58              1,42
+40  DeepSeek  L      прочитано            61782      273                      0                97,8               2,2
+41  ChatGPT   L      прочитано            45156      246                      0               99,19              0,81
+42  DeepSeek  S      прочитано            15443       65                      0               98,46              1,54
+43  Gemini    M      прочитано            32118      134                      0                 100                 0
+44  ChatGPT   M      прочитано            26310      140                      0               99,29              0,71
+45  Gemini    L      прочитано            52903      272                      0                 100                 0
+46  DeepSeek  M      прочитано            29600      139                      0               97,12              2,88
+47  Gemini    S      прочитано            17096       70                      0                 100                 0
+48  ChatGPT   M      прочитано            32420      141                      0               87,23             12,77
+49  DeepSeek  L      прочитано            47879      271                      0                 100                 0
+50  ChatGPT   L      прочитано            72486      308                      0                 100                 0
+51  Gemini    L      прочитано            64633      275                      0                 100                 0
+52  DeepSeek  S      прочитано            15149       65                      0               98,46              1,54
+53  ChatGPT   S      прочитано            13907       62                      0                 100                 0
+54  Gemini    M      прочитано            28247      128                      0                 100                 0
+55  Gemini    L      прочитано            50672      263                      0                 100                 0
+56  ChatGPT   L      прочитано            44640      246                      0               99,59              0,41
+57  DeepSeek  L      прочитано            57064      268                      0               97,76              2,24
+58  ChatGPT   S      прочитано            18984       72                      0                 100                 0
+59  Gemini    S      прочитано            16914       70                      0                 100                 0
+60  DeepSeek  M      прочитано            28894      138                      0                97,1               2,9
+61  Gemini    M      прочитано            32817      137                      0                 100                 0
+62  DeepSeek  S      прочитано            16190       70                      0                 100                 0
+63  ChatGPT   M      прочитано            24362      123                      0                 100                 0
+64  ChatGPT   M      прочитано            32248      123                      0                 100                 0
+65  ChatGPT   S      прочитано            16103       62                      0                 100                 0
+66  ChatGPT   L      прочитано            66726      289                      0                 100                 0
+67  Gemini    L      прочитано            47266      254                      0                 100                 0
+68  DeepSeek  M      прочитано            28774      137                      0               97,08              2,92
+69  Gemini    S      прочитано            16776       68                      0                 100                 0
+70  DeepSeek  L      прочитано            51782      288                      0               94,44              5,56
+71  Gemini    M      прочитано            33727      139                      0                 100                 0
+72  DeepSeek  S      прочитано            17094       74                      0                 100                 0
+73  DeepSeek  L      прочитано            55741      261                      0               96,93              3,07
+74  ChatGPT   M      прочитано            24714      133                      0               99,25              0,75
+75  DeepSeek  M      прочитано            32134      138                      0                97,1               2,9
+76  Gemini    L      прочитано            52797      270                      0                 100                 0
+77  Gemini    M      прочитано            31986      135                      0                 100                 0
+78  ChatGPT   S      прочитано            18858       73                      0                 100                 0
+79  DeepSeek  S      прочитано            15109       70                      0                 100                 0
+80  ChatGPT   L      прочитано            44689      246                      0               99,19                 0
+81  Gemini    S      прочитано            16366       67                      0                 100                 0
+82  Gemini    M      прочитано            34643      141                      0                 100                 0
+83  Gemini    L      прочитано            63083      267                      0                 100                 0
+84  DeepSeek  L      прочитано            41793      246                      0                 100                 0
+85  DeepSeek  S      прочитано            17356       74                      0                 100                 0
+86  ChatGPT   S      прочитано            17282       62                      0                 100                 0
+87  ChatGPT   M      прочитано            36992      154                      0                 100                 0
+88  Gemini    S      прочитано            17090       71                      0                 100                 0
+89  ChatGPT   L      прочитано            69593      290                      0               97,24              2,76
+
+
+3. Частки порушених перевірок, %
+
+№   Модель    Обсяг  Г1    Г2     Г2*  Г3    Г3°   Заг   Заг*  2.5
+--  --------  -----  ----  -----  ---  ----  ----  ----  ----  -----
+ 1  DeepSeek  M         0   5,88    0     0     0   0,1     0  2 / 4
+ 2  Gemini    S         0      0    0     0     0     0     0  0 / 1
+ 3  ChatGPT   L         0      0    0     0     0     0     0  0 / 8
+ 4  DeepSeek  L         0      0    0   0,1  0,56  0,03  0,03  0 / 8
+ 5  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+ 6  DeepSeek  S         0   8,33    0  0,38  2,27   0,2   0,1  1 / 1
+ 7  Gemini    M         0      0    0     0     0     0     0  0 / 4
+ 8  Gemini    L         0      0    0     0     0     0     0  0 / 8
+ 9  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+10  Gemini    L         0      0    0     0     0     0     0  0 / 8
+11  ChatGPT   L         0      0    0     0     0     0     0  0 / 8
+12  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+13  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+14  Gemini    S         0      0    0     0     0     0     0  0 / 1
+15  Gemini    M         0      0    0     0     0     0     0  0 / 4
+16  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+17  DeepSeek  M         0   9,38    0     0     0  0,15     0  3 / 4
+18  DeepSeek  L         0   9,68    0     0     0  0,16     0  6 / 8
+19  DeepSeek  M         0   12,5    0  0,19  1,11  0,25  0,05  4 / 4
+20  DeepSeek  L         0  11,76    0  0,43  2,23  0,34  0,11  8 / 8
+22  Gemini    L         0      0    0     0     0     0     0  0 / 8
+23  Gemini    S         0      0    0     0     0     0     0  0 / 1
+24  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+25  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+26  Gemini    M         0      0    0     0     0     0     0  0 / 4
+27  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+28  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+29  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+30  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+31  Gemini    M         0      0    0     0     0     0     0  0 / 4
+32  DeepSeek  L         0   7,58    0  0,83  4,49  0,36  0,22  5 / 8
+33  ChatGPT   L         0      0    0     0     0     0     0  0 / 8
+34  DeepSeek  M         0   6,67    0  0,19  1,11  0,15  0,05  2 / 4
+35  Gemini    S         0      0    0     0     0     0     0  0 / 1
+36  Gemini    L         0      0    0     0     0     0     0  0 / 8
+37  Gemini    S         0      0    0     0     0     0     0  0 / 1
+38  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+39  DeepSeek  M         0   5,88    0     0     0   0,1     0  2 / 4
+40  DeepSeek  L         0   9,09    0     0     0  0,16     0  6 / 8
+41  ChatGPT   L         0      0    0  0,23  1,12  0,06  0,06  0 / 8
+42  DeepSeek  S         0   8,33    0     0     0  0,11     0  1 / 1
+43  Gemini    M         0      0    0     0     0     0     0  0 / 4
+44  ChatGPT   M         0      0    0   0,2  1,12  0,05  0,05  0 / 4
+45  Gemini    L         0      0    0     0     0     0     0  0 / 8
+46  DeepSeek  M         0  13,33    0  0,19  1,11  0,26  0,05  4 / 4
+47  Gemini    S         0      0    0     0     0     0     0  0 / 1
+48  ChatGPT   M         0      0    0  3,61     0  0,95  0,95  0 / 4
+49  DeepSeek  L         0      0    0     0     0     0     0  0 / 8
+50  ChatGPT   L         0      0    0     0     0     0     0  0 / 8
+51  Gemini    L         0      0    0     0     0     0     0  0 / 8
+52  DeepSeek  S         0   7,14    0     0     0  0,11     0  1 / 1
+53  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+54  Gemini    M         0      0    0     0     0     0     0  0 / 4
+55  Gemini    L         0      0    0     0     0     0     0  0 / 8
+56  ChatGPT   L         0      0    0  0,11  0,56  0,03  0,03  0 / 8
+57  DeepSeek  L         0   8,82    0     0     0  0,16     0  6 / 8
+58  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+59  Gemini    S         0      0    0     0     0     0     0  0 / 1
+60  DeepSeek  M         0   12,5    0     0     0  0,21     0  4 / 4
+61  Gemini    M         0      0    0     0     0     0     0  0 / 4
+62  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+63  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+64  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+65  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+66  ChatGPT   L         0      0    0     0     0     0     0  0 / 8
+67  Gemini    L         0      0    0     0     0     0     0  0 / 8
+68  DeepSeek  M         0  13,33    0     0     0  0,21     0  4 / 4
+69  Gemini    S         0      0    0     0     0     0     0  0 / 1
+70  DeepSeek  L         0  13,33    0  0,76  4,49   0,4   0,2  8 / 8
+71  Gemini    M         0      0    0     0     0     0     0  0 / 4
+72  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+73  DeepSeek  L         0   12,5    0     0     0  0,22     0  8 / 8
+74  ChatGPT   M         0      0    0  0,21     0  0,05  0,05  0 / 4
+75  DeepSeek  M         0  11,76    0   0,2  1,11  0,26  0,05  4 / 4
+76  Gemini    L         0      0    0     0     0     0     0  0 / 8
+77  Gemini    M         0      0    0     0     0     0     0  0 / 4
+78  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+79  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+80  ChatGPT   L      0,08      0    0     0     0  0,06  0,06  0 / 8
+81  Gemini    S         0      0    0     0     0     0     0  0 / 1
+82  Gemini    M         0      0    0     0     0     0     0  0 / 4
+83  Gemini    L         0      0    0     0     0     0     0  0 / 8
+84  DeepSeek  L         0      0    0     0     0     0     0  0 / 8
+85  DeepSeek  S         0      0    0     0     0     0     0  0 / 1
+86  ChatGPT   S         0      0    0     0     0     0     0  0 / 1
+87  ChatGPT   M         0      0    0     0     0     0     0  0 / 4
+88  Gemini    S         0      0    0     0     0     0     0  0 / 1
+89  ChatGPT   L         0      0    0  0,78  4,49   0,2   0,2  0 / 8
+
+
+4. Перевірки за правилами: порушено / оцінено (сума за 10 повторами)
+
+Правило  ChatGPT S  ChatGPT M  ChatGPT L  DeepSeek S  DeepSeek M  DeepSeek L  Gemini S  Gemini M  Gemini L
+-------  ---------  ---------  ---------  ----------  ----------  ----------  --------  --------  --------
+1.1      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.2      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.3      0/658      0/1326     0/2363     0/692       0/1258      0/2666      0/690     0/1351    0/2646
+1.4      0/4239     0/8474     2/14883    0/4409      0/8077      0/17095     0/4456    0/8757    0/17216
+1.5      0/1015     0/2049     0/3638     0/1071      0/1959      0/4108      0/1072    0/2091    0/4079
+1.6      0/785      0/1537     0/2602     0/744       0/1336      0/2938      0/751     0/1505    0/3006
+2.1      0/29       0/57       0/105      0/22        0/51        0/113       0/30      0/58      0/118
+2.2      0/29       0/57       0/104      0/20        0/48        0/109       0/30      0/55      0/115
+2.3      0/29       0/57       0/104      0/20        0/48        0/109       0/30      0/55      0/115
+2.4      0/29       0/57       0/105      0/22        0/51        0/113       0/30      0/58      0/118
+2.5      0/10       0/40       0/72       3/10        29/36       47/80       0/10      0/40      0/80
+2.6      0/30       0/60       0/108      0/30        0/54        0/120       0/30      0/60      0/120
+3.1      0/948      18/1896    0/3389     0/982       0/1771      0/3806      0/980     0/1921    0/3786
+3.2      0/846      1/1701     0/3056     0/1004      0/1841      0/3792      0/1000    0/1952    0/3792
+3.3      0/120      0/240      0/432      0/120       0/216       0/480       0/120     0/240     0/480
+3.4      0/90       0/180      0/324      0/90        0/162       0/360       0/90      0/180     0/360
+3.5      0/30       0/60       2/108      0/30        0/54        0/120       0/30      0/60      0/120
+3.6      0/10       0/40       0/72       0/10        0/36        0/80        0/10      0/40      0/80
+3.7      0/100      0/200      0/360      0/100       0/180       11/400      0/100     0/200     0/400
+3.8      0/100      0/200      8/360      0/100       0/180       0/400       0/100     0/200     0/400
+3.9      0/100      1/200      0/360      1/100       0/180       8/400       0/100     0/200     0/400
+3.10     0/10       0/10       1/19       0/10        4/13        2/22        0/10      0/10      0/20
+
+
+5. Порушення й неоцінені перевірки
+
+Файл відповіді                           Етап  Правило  Таблиця                   № запису  id запису  Результат  Деталі
+---------------------------------------  ----  -------  ------------------------  --------  ---------  ---------  ------------------------------------------------
+answers/main/deepseek/ds_M_01.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-10-31
+answers/main/deepseek/ds_M_01.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_L_01.txt           4  3.10     Vacancy                          1  v1         порушено   вакансія ACTIVE/None
+answers/main/deepseek/ds_S_01.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_S_01.txt           4  3.9      Application                      6  a6         порушено   запис 2: перехід SENT -> SENT не дозволено
+answers/main/deepseek/ds_M_02.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-08-31
+answers/main/deepseek/ds_M_02.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-09-15
+answers/main/deepseek/ds_M_02.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-10-01
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-10
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-10-05
+answers/main/deepseek/ds_L_02.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-05-10
+answers/main/deepseek/ds_M_03.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-01
+answers/main/deepseek/ds_M_03.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_M_03.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-20
+answers/main/deepseek/ds_M_03.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-10
+answers/main/deepseek/ds_M_03.txt           4  3.10     Vacancy                          3  v3         порушено   вакансія ACTIVE/None
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          7  v7         порушено   closingDate=2026-05-31
+answers/main/deepseek/ds_L_03.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-05-31
+answers/main/deepseek/ds_L_03.txt           4  3.7      Application                     24  a24        порушено   повторює відгук a4
+answers/main/deepseek/ds_L_03.txt           4  3.7      Application                     34  a34        порушено   повторює відгук a26
+answers/main/deepseek/ds_L_03.txt           4  3.7      Application                     36  a36        порушено   повторює відгук a28
+answers/main/deepseek/ds_L_03.txt           4  3.10     Vacancy                          1  v1         порушено   вакансія ACTIVE/None
+answers/main/deepseek/ds_L_04.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-10-31
+answers/main/deepseek/ds_L_04.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_L_04.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-08-31
+answers/main/deepseek/ds_L_04.txt           3  2.5      Vacancy                          7  v7         порушено   closingDate=2026-07-31
+answers/main/deepseek/ds_L_04.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     33  a33        порушено   повторює відгук a4
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     34  a34        порушено   повторює відгук a8
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     35  a35        порушено   повторює відгук a15
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     36  a36        порушено   повторює відгук a20
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     37  a37        порушено   повторює відгук a23
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     38  a38        порушено   повторює відгук a11
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     39  a39        порушено   повторює відгук a18
+answers/main/deepseek/ds_L_04.txt           4  3.7      Application                     40  a40        порушено   повторює відгук a29
+answers/main/deepseek/ds_M_04.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-10-31
+answers/main/deepseek/ds_M_04.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_M_04.txt           4  3.10     Vacancy                          1  v1         порушено   вакансія ACTIVE/None
+answers/main/deepseek/ds_M_05.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-10-31
+answers/main/deepseek/ds_M_05.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-01
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-01
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-01
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-10-01
+answers/main/deepseek/ds_L_05.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-11-01
+answers/main/chatgpt/gpt_L_05.txt           4  3.5      Vacancy                          5  v5         порушено   —
+answers/main/chatgpt/gpt_L_05.txt           4  3.5      Vacancy                          6  v6         порушено   —
+answers/main/deepseek/ds_S_05.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/chatgpt/gpt_M_05.txt           4  3.9      Application                     16  a16        порушено   запис 2: перехід SENT -> SENT не дозволено
+answers/main/deepseek/ds_M_06.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_M_06.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_M_06.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_M_06.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-07-30
+answers/main/deepseek/ds_M_06.txt           4  3.10     Vacancy                          3  v3         порушено   вакансія ACTIVE/None
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory         6  ash5       порушено   id повторює запис 4
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory         9  ash7       порушено   id повторює запис 7
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        17  ash13      порушено   id повторює запис 14
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        18  ash14      порушено   id повторює запис 15
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        20  ash15      порушено   id повторює запис 18
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        25  ash19      порушено   id повторює запис 23
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        30  ash23      порушено   id повторює запис 28
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        36  ash27      порушено   id повторює запис 33
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        37  ash28      порушено   id повторює запис 34
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        41  ash31      порушено   id повторює запис 39
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        44  ash33      порушено   id повторює запис 42
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        50  ash35      порушено   id повторює запис 45
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        51  ash36      порушено   id повторює запис 46
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        52  ash37      порушено   id повторює запис 47
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        53  ash38      порушено   id повторює запис 48
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        54  ash37      порушено   id повторює запис 47
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        55  ash38      порушено   id повторює запис 48
+answers/main/chatgpt/gpt_M_06.txt           4  3.1      ApplicationStatusHistory        57  ash39      порушено   id повторює запис 55
+answers/main/deepseek/ds_S_06.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/chatgpt/gpt_L_07.txt           4  3.10     Vacancy                          8  v8         порушено   вакансія ACTIVE/None
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-10-31
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-08-31
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-07-31
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          7  v7         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_07.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-05-31
+answers/main/deepseek/ds_M_07.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-07-01
+answers/main/deepseek/ds_M_07.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_M_07.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-09-01
+answers/main/deepseek/ds_M_07.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-08-15
+answers/main/deepseek/ds_M_08.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_M_08.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_M_08.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_M_08.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-07-20
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-15
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-07-01
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-09-01
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-08-15
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          7  v7         порушено   closingDate=2026-07-20
+answers/main/deepseek/ds_L_08.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-08-01
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                      3  a3         порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                      7  a7         порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     12  a12        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     16  a16        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     23  a23        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     27  a27        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     32  a32        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_08.txt           4  3.9      Application                     37  a37        порушено   останній статус в історії VIEWED, у відгуку SENT
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-01
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-05-15
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-04-20
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-03-30
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          5  v5         порушено   closingDate=2026-05-10
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          6  v6         порушено   closingDate=2026-06-20
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          7  v7         порушено   closingDate=2026-04-15
+answers/main/deepseek/ds_L_09.txt           3  2.5      Vacancy                          8  v8         порушено   closingDate=2026-03-01
+answers/main/chatgpt/gpt_M_09.txt           4  3.2      Application                      8  a8         порушено   studentProfileId=sp16
+answers/main/deepseek/ds_M_09.txt           3  2.5      Vacancy                          1  v1         порушено   closingDate=2026-06-30
+answers/main/deepseek/ds_M_09.txt           3  2.5      Vacancy                          2  v2         порушено   closingDate=2026-07-31
+answers/main/deepseek/ds_M_09.txt           3  2.5      Vacancy                          3  v3         порушено   closingDate=2026-08-31
+answers/main/deepseek/ds_M_09.txt           3  2.5      Vacancy                          4  v4         порушено   closingDate=2026-09-30
+answers/main/deepseek/ds_M_09.txt           4  3.10     Vacancy                          4  v4         порушено   вакансія ACTIVE/None
+answers/main/chatgpt/gpt_L_09_clean.txt     2  1.4      User                            35  u35        порушено   createdAt=2026-02-29T10:15:00Z
+answers/main/chatgpt/gpt_L_09_clean.txt     2  1.4      User                            36  u36        порушено   createdAt=2026-02-30T10:15:00Z
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     24  a24        порушено   створено 2026-08-11, вакансія до 2026-12-27
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     25  a25        порушено   створено 2026-08-11, вакансія до 2026-12-27
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     32  a32        порушено   створено 2026-08-15, вакансія до 2026-12-30
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     33  a33        порушено   створено 2026-08-15, вакансія до 2026-12-30
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     34  a34        порушено   створено 2026-08-15, вакансія до 2026-12-30
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     35  a35        порушено   створено 2026-08-17, вакансія до 2026-12-31
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     36  a36        порушено   створено 2026-08-17, вакансія до 2026-12-31
+answers/main/chatgpt/gpt_L_10.txt           4  3.8      Application                     40  a40        порушено   створено 2026-08-19, вакансія до 2027-01-05
+
+
+6. Модель і обсяг
+
+Модель    Обсяг  Запусків  Прочитано  Повних, %  Медіана Заг*  Q1  Q3    Мінімум  Максимум
+--------  -----  --------  ---------  ---------  ------------  --  ----  -------  --------
+ChatGPT   S            10         10        100             0   0     0        0         0
+ChatGPT   M            10         10        100             0   0  0,05        0      0,95
+ChatGPT   L             9          9        100             0   0  0,06        0       0,2
+DeepSeek  S            10         10        100             0   0     0        0       0,1
+DeepSeek  M             9          9        100             0   0  0,05        0      0,05
+DeepSeek  L            10         10        100             0   0  0,11        0      0,22
+Gemini    S            10         10        100             0   0     0        0         0
+Gemini    M            10         10        100             0   0     0        0         0
+Gemini    L            10         10        100             0   0     0        0         0
+
+Модель    Обсяг  Медіана Г2*  Медіана Г3  Медіана Г3°  Запусків із порушенням 2.5  Медіана придатних, %  Медіана П1, %  Медіана «Продовжити»
+--------  -----  -----------  ----------  -----------  --------------------------  --------------------  -------------  --------------------
+ChatGPT   S                0           0            0                           0                   100              0                     0
+ChatGPT   M                0           0            0                           0                   100              0                     0
+ChatGPT   L                0           0            0                           0                   100              0                     0
+DeepSeek  S                0           0            0                           3                   100              0                     0
+DeepSeek  M                0           0            0                           9                 97,18           2,82                     1
+DeepSeek  L                0           0            0                           7                 97,77           2,23                   2,5
+Gemini    S                0           0            0                           0                   100              0                     0
+Gemini    M                0           0            0                           0                   100              0                     0
+Gemini    L                0           0            0                           0                   100              0                     0
+
+
+7. Рішення
+
+H1: модель  Запусків, де Г3 > Г2*  Усього запусків  Більш ніж у половині
+----------  ---------------------  ---------------  --------------------
+ChatGPT                         6               29  ні
+DeepSeek                        9               29  ні
+Gemini                          0               30  ні
+
+Рішення H1: H1 не підтверджено
+
+H2: обсяг  Пара моделей        Q1–Q3 першої, %  Q1–Q3 другої, %  Проміжки перетинаються  Менша частка в
+---------  ------------------  ---------------  ---------------  ----------------------  --------------
+S          ChatGPT / DeepSeek  0,0–0,0          0,0–0,0          так                     —
+S          ChatGPT / Gemini    0,0–0,0          0,0–0,0          так                     —
+S          DeepSeek / Gemini   0,0–0,0          0,0–0,0          так                     —
+M          ChatGPT / DeepSeek  0,0–0,05         0,0–0,05         так                     —
+M          ChatGPT / Gemini    0,0–0,05         0,0–0,0          так                     —
+M          DeepSeek / Gemini   0,0–0,05         0,0–0,0          так                     —
+L          ChatGPT / DeepSeek  0,0–0,06         0,0–0,11         так                     —
+L          ChatGPT / Gemini    0,0–0,06         0,0–0,0          так                     —
+L          DeepSeek / Gemini   0,0–0,11         0,0–0,0          так                     —
+
+Рішення H2: H2 не підтверджено
+
+
+8. Повторюваність: у скількох повторах порушено правило
+
+0 — не траплялося; не більше половини повторів — епізодичне; більше половини — постійне.
+
+Правило  ChatGPT S  ChatGPT M  ChatGPT L  DeepSeek S  DeepSeek M  DeepSeek L  Gemini S  Gemini M  Gemini L
+-------  ---------  ---------  ---------  ----------  ----------  ----------  --------  --------  --------
+1.1      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.2      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.3      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.4      0/10       0/10       1/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.5      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+1.6      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+2.1      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+2.2      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+2.3      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+2.4      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+2.5      0/10       0/10       0/9        3/10        9/9         7/10        0/10      0/10      0/10
+2.6      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.1      0/10       1/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.2      0/10       1/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.3      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.4      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.5      0/10       0/10       1/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.6      0/10       0/10       0/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.7      0/10       0/10       0/9        0/10        0/9         2/10        0/10      0/10      0/10
+3.8      0/10       0/10       1/9        0/10        0/9         0/10        0/10      0/10      0/10
+3.9      0/10       1/10       0/9        1/10        0/9         1/10        0/10      0/10      0/10
+3.10     0/10       0/10       1/9        0/10        4/9         2/10        0/10      0/10      0/10
